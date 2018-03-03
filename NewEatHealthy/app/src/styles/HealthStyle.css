@@ -1,0 +1,35 @@
+.rset-jumbotron {
+  padding: 30px;
+  margin-bottom: 30px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 2.1428571435;
+  color: inherit;
+  background-color: #4cff00;
+}
+
+.navbar-inverse {
+    background-color: #547b11;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    font-weight: bold;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #e3e5de;
+}
+
+.container .jumbotron {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.jumbotron {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}

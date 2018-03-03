@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html ng-app="EatHealthy">
+<head>
+	<title>New EatHealthy</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="styles/bootstrap.min.css">
+	<link rel="stylesheet" href="styles/site.css">
+	<link rel="stylesheet" href="styles/HealthStyle.css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+</head>
+<body>
+	 <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+				<a href="Index" class="navbar-brand">EatHealthy</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    
+                    <li><a href="Posts/Index">Posts</a></li>	
+					<li><a href="Posts/RecommendedPosts">Recommended Posts</a></li>
+					
+					<!--
+					@if (clnt != null && clnt.IsAdmin)
+                    {
+					<li><a href="Categories/Index">Categories</a></li>
+					<li><a href="Clients/Index">Clients</a></li>
+					<li><a href="Markers/Index">Markers</a></li>
+					}
+					-->
+					
+					<li><a href="Clients/Stats">Users Statistics</a></li>
+					<li><a href="Posts/Stats">Posts Statistics</a></li>	
+					<li><a href="Home/About">About</a></li>	
+					<li><a href="Home/Contact">Contact</a></li>					
+                </ul>
+               
+			   <ul class="nav navbar-nav navbar-right">
+				<!-- @if (clnt == null)
+				{
+				-->
+					<li><a href="Clients/Create">Register</a></li>	
+					<li><a href="Clients/Login">Login</a></li>
+				<!-- 	
+				}
+				else
+				{
+					<li><a style="color: white !important; font-size: 18px;pointer-events:none;" href="#">Welcome @(clnt.FirstName + " " + clnt.LastName)</a></li>
+					<li><a href="Clients/Logout">Log Out</a></li>	
+				}
+				-->
+			</ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content" style="padding-top: 10px; margin-top: 55px;">
+        @RenderBody()
+
+        <br /><br />
+        <iframe src="http://free.timeanddate.com/clock/i5xjfv16/n676/tlil/tt0" frameborder="0" width="282" height="19"></iframe>
+
+
+        <!-- Weather service -->
+
+        <hr />
+        <footer>
+            <center>
+                <p>&copy; @DateTime.Now.Year - EatHealthy </p>
+            </center>
+        </footer>
+    </div>
+
+	<script src="angular.min.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
