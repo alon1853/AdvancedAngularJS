@@ -1,0 +1,100 @@
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyB1tCknrD6wF4b9T-Z1XdkpvP7gJJoGSp0"></script>
+
+<h2>Contact Us</h2>
+
+<center>
+    <aside>
+       <div style="display: inline-block;">
+           <a href="https://www.facebook.com/" target="_blank">
+               <img src="../images/facebook.png" style="width: 48px; height: 48px;" title="Facebook" class="rotate" />
+            </a>
+       </div>
+
+        <div style="display: inline-block;">
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="../images/instagram.png" style="width: 48px; height: 48px;" title="Instagram" class="rotate" />
+            </a>
+        </div>
+
+        <div style="display: inline-block;">
+            <a href="https://www.twitter.com/" target="_blank">
+                <img src="../images/twitter.ico" style="width: 48px; height: 48px;" title="Twitter" class="rotate" />
+            </a>
+        </div>
+
+        <div style="display: inline-block;">
+            <a href="https://www.icq.com/" target="_blank">
+                <img src="../images/icq.jpg" style="width: 48px; height: 48px;" title="ICQ" class="rotate" />
+            </a>
+        </div>
+     </aside>
+
+
+    <div id="map" style="width: 500px; height: 400px; margin-top: 30px;"></div>
+</center>
+<script type="text/javascript">
+  var crd, locations;
+  var options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};
+
+function getjson(url)
+{
+     var json = null;
+     $.ajax({
+         'async': false,
+         'global': false,
+         'url': url,
+         'dataType': "json",
+         'success': function (data)
+         {
+             json = data;
+         }
+     });
+
+     return json;
+}
+
+function error(err) {
+  console.warn('ERROR(' + err.code + '): ' + err.message);
+};
+
+navigator.geolocation.getCurrentPosition(setMap, error, options);
+
+function setMap(pos)
+{
+    crd = pos.coords;
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: new google.maps.LatLng(crd.latitude, crd.longitude),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var markers = getjson('/markers/getjson');
+
+    for (var i = 0 ; i < markers.length; i++)
+    {
+
+       var marker = new google.maps.Marker({
+           position: new google.maps.LatLng(markers[i].lat, markers[i].lng),
+            map: map
+       });
+
+       marker.tag = "Name: " + markers[i].Name + "</br>Address: " + markers[i].Address + "</br>Type: " + markers[i].type;
+
+       google.maps.event.addListener(marker, 'click', (function (marker)
+       {
+           return function ()
+           {
+               infowindow.setContent(marker.tag);
+               infowindow.open(map, marker);
+           }
+       })(marker));
+ 
+    }
+  }
+</script>

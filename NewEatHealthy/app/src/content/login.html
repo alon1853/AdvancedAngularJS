@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <h2>Login</h2>
+    <div style="display: block; padding: 10px;">
+		<form name="signInForm" ng-submit="submitForm()">
+            <div class="form-group">
+				<label class="control-label col-md-2">Username</label>
+				<input required type="text" class="form-control" ng-model="username">
+				<span ng-show="shouldShowInvalidUsername" class="text-danger field-validation-error">The Username field is required.</span>
+				
+				<label class="control-label col-md-2">Password</label>
+				<input required type="password" class="form-control" ng-model="password">
+				<span ng-show="shouldShowInvalidPassword" class="text-danger field-validation-error">The Password field is required.</span>
+            </div>
+
+            <input type="submit" class="btn btn-default" value="Sign in" ng-click="submitForm()" />
+            <a href="~/Clients/Create">Register</a>
+		</form>
+    </div>
+</div>
