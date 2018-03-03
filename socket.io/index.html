@@ -1,0 +1,9 @@
+<script src="http://localhost:3001/socket.io/socket.io.js"></script>
+<script>
+  var server = io.connect('http://localhost:3001');
+  
+  server.on('messages', function(data){
+    console.log('client sent message ' + data.data);
+    alert(data.data);
+  })
+</script>
