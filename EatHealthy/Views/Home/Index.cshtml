@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    EatHealthy.Models.Client clnt = (EatHealthy.Models.Client)Session["Client"];
+}
+
+<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+
+<div class="jumbotron">
+    <h1 style="text-shadow: 2px 2px 0px #fff; font-family: 'Dosis', sans-serif;">
+        EatHealthy
+    </h1>
+    <p class="lead">Your life, Your choice - Eat Healthy</p>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Welcome aboard</h2>
+        <p class="multiple-columns">
+            You can sign-up to our blog, post some data about healty life style and share your knowledge with people around the world.
+            You can write some comments to other people and write your opinion.
+        </p>
+
+        @if (clnt == null)
+        {
+            <p><a class="btn btn-default" href="Clients/Create">Sign Up &raquo;</a></p>
+        }
+    </div>
+    <div class="col-md-4">
+        <h2>Great Healthy Tips</h2>
+        <video controls style="width: 560px; height: 315px;" poster="https://i.ytimg.com/vi_webp/EhMdChazw6Q/maxresdefault.webp" src="https://r5---sn-aigl6ned.googlevideo.com/videoplayback?ei=VlPjWaWeBca2VIKPovgL&expire=1508091830&requiressl=yes&mime=video%2Fmp4&ratebypass=yes&ipbits=0&sparams=dur,ei,expire,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,requiressl,source&id=o-AJ85zZS7kPYJ6W4dns4RlTQ2Qj0CoVnPcm28865by7F5&itag=22&source=youtube&ip=193.106.52.32&key=cms1&dur=347.393&pl=24&signature=6447601FCE411834260FC94B84051445562196AA.11F292668ADE168356D7E767B52434E258B29C33&lmt=1507887386259499&redirect_counter=1&cm2rm=sn-a8au-aigl76&fexp=9462442,23702512&req_id=e37b76b30879a3ee&cms_redirect=yes&mm=30&mn=sn-aigl6ned&ms=nxu&mt=1508070172&mv=m" type="video/mp4"></video>
+    </div>
+</div>

@@ -1,0 +1,124 @@
+﻿@{
+    ViewBag.Title = "Search";
+}
+
+@model IEnumerable<EatHealthy.Models.Post>
+
+@{
+    ViewBag.Title = "Search Results";
+    EatHealthy.Models.Client clnt = (EatHealthy.Models.Client)Session["Client"];
+}
+
+@if (clnt != null)
+{
+    <a href="Posts/Create">
+        <button class="btn btn-primary" style="margin-bottom: 10px;">
+            Create a new Post
+        </button>
+    </a>
+}
+
+@using (Html.BeginForm("Search", "Posts", FormMethod.Get))
+{
+    <div class="row" style="margin-bottom: 10px;">
+        <div class="form-group">
+            <div class="col-md-2">
+                Title:
+            </div>
+            <div class="col-md-10">
+                <input type="text" name="title" class="form-control" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="margin-bottom: 10px;">
+        <div class="form-group">
+            <div class="col-md-2">
+                Content:
+            </div>
+            <div class="col-md-10">
+                <input type="text" name="content" class="form-control" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="margin-bottom: 10px;">
+        <div class="form-group">
+            <div class="col-md-2">
+                Creation Date:
+            </div>
+            <div class="col-md-10">
+                <input type="date" name="date" class="form-control" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Search" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+
+    <div style="border-bottom: 2px #ccc dashed; margin-top: 20px;"></div>
+}
+@foreach (var post in Model)
+{
+    <section>
+        <article class="blogPost">
+            <header>
+                <h2>@Html.DisplayFor(modelItem => post.Category.Name)</h2>
+                <p>Posted on @Html.DisplayFor(modelItem => post.CreationDate) by <a href="#">@Html.DisplayFor(modelItem => post.Client.ClientName)</a> - <a href="#comments">@post.Comments.Count Comments</a></p>
+            </header>
+
+            <h3>
+                @Html.DisplayFor(modelItem => post.Title)
+            </h3>
+            @Html.DisplayFor(modelItem => post.Content)
+
+            @if (clnt != null && clnt.IsAdmin)
+                {
+                <div>
+                    @Html.ActionLink("Edit", "Edit", new { id = post.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = post.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = post.ID })
+                </div>
+            }
+
+        </article>
+    </section>
+        <section id="comments">
+            <h3>Comments</h3>
+            @foreach (var comment in post.Comments)
+            {
+                <article>
+                    <header>
+                        <span>By @comment.Client.ClientName</span> at @comment.CreationDate
+                    </header>
+                    @comment.Content
+                </article>
+            }
+
+            @if (clnt != null)
+            {
+                using (Html.BeginForm("PostComment", "Posts"))
+                {
+
+                    <input type="hidden" name="clientId" value="@clnt.ID" />
+                    <input type="hidden" name="postId" value="@post.ID" />
+
+                    <div>
+                        Content: <input type="text" name="content" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <div style="margin-top: 10px;">
+                            <input type="submit" value="Post" class="btn btn-default" />
+                        </div>
+                    </div>
+                    <br />
+                }
+            }
+        </section>
+}
+

@@ -1,0 +1,422 @@
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\ApplicationInsights.config
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\csc.exe
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\vbc.exe
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\VBCSCompiler.exe
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\EatHealthy.dll.config
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\EatHealthy.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\EatHealthy.pdb
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Antlr3.Runtime.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\EntityFramework.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\EntityFramework.SqlServer.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AI.Web.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.ApplicationInsights.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Newtonsoft.Json.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Owin.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.Helpers.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.Mvc.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.Optimization.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.Razor.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.WebPages.Deployment.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.WebPages.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.WebPages.Razor.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\WebGrease.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AI.Web.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.ApplicationInsights.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.Helpers.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.Mvc.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.Optimization.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.Razor.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.WebPages.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.WebPages.Deployment.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.WebPages.Razor.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Antlr3.Runtime.pdb
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Newtonsoft.Json.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\EntityFramework.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\EntityFramework.SqlServer.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\obj\Debug\EatHealthy.Migrations.Migration33.resources
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\obj\Debug\EatHealthy.Migrations.Migration331.resources
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\obj\Debug\EatHealthy.csproj.GenerateResource.Cache
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\obj\Debug\EatHealthy.csproj.CoreCompileInputs.cache
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\obj\Debug\EatHealthy.dll
+C:\Users\sharon\Downloads\EatHealthy\EatHealthy\EatHealthy\obj\Debug\EatHealthy.pdb
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\ApplicationInsights.config
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\csc.exe
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\vbc.exe
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\VBCSCompiler.exe
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\EatHealthy.dll.config
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\EatHealthy.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\EatHealthy.pdb
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Antlr3.Runtime.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\EntityFramework.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\EntityFramework.SqlServer.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AI.Web.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Newtonsoft.Json.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Owin.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.Helpers.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.Mvc.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.Optimization.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.Razor.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.WebPages.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.WebPages.Razor.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\WebGrease.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AI.Web.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.Helpers.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.Mvc.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.Optimization.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.Razor.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.WebPages.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\System.Web.WebPages.Razor.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Antlr3.Runtime.pdb
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Newtonsoft.Json.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\EntityFramework.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\EntityFramework.SqlServer.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\obj\Debug\EatHealthy.Migrations.Migration33.resources
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\obj\Debug\EatHealthy.Migrations.Migration331.resources
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\obj\Debug\EatHealthy.csproj.GenerateResource.Cache
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\obj\Debug\EatHealthy.csproj.CoreCompileInputs.cache
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\obj\Debug\EatHealthy.dll
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\obj\Debug\EatHealthy.pdb
+C:\Users\Alon\Downloads\EatHealthy0.4\EatHealthy\EatHealthy\EatHealthy\obj\Debug\EatHealthy.csprojResolveAssemblyReference.cache
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\ApplicationInsights.config
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\roslyn\csc.exe
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\roslyn\vbc.exe
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\roslyn\VBCSCompiler.exe
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\EatHealthy.dll.config
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\EatHealthy.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\EatHealthy.pdb
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Antlr3.Runtime.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\EntityFramework.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\EntityFramework.SqlServer.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.AI.Web.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.Owin.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Newtonsoft.Json.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Owin.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\System.Web.Helpers.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\System.Web.Mvc.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\System.Web.Optimization.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\System.Web.Razor.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\System.Web.WebPages.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\System.Web.WebPages.Razor.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\WebGrease.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.AI.Web.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\System.Web.Helpers.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\System.Web.Mvc.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\System.Web.Optimization.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\System.Web.Razor.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\System.Web.WebPages.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\System.Web.WebPages.Razor.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Antlr3.Runtime.pdb
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Newtonsoft.Json.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\EntityFramework.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\EntityFramework.SqlServer.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.Owin.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\obj\Debug\EatHealthy.csprojResolveAssemblyReference.cache
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\obj\Debug\EatHealthy.Migrations.Migration33.resources
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\obj\Debug\EatHealthy.Migrations.Migration331.resources
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\obj\Debug\EatHealthy.csproj.GenerateResource.Cache
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\obj\Debug\EatHealthy.dll
+C:\Users\Roni\Desktop\EatHealthy v0.6\EatHealthy\EatHealthy\obj\Debug\EatHealthy.pdb
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\ApplicationInsights.config
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\roslyn\csc.exe
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\roslyn\System.Collections.Immutable.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\roslyn\System.Reflection.Metadata.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\roslyn\vbc.exe
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\roslyn\VBCSCompiler.exe
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\roslyn\VBCSCompiler.exe.config
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\EatHealthy.dll.config
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\EatHealthy.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\EatHealthy.pdb
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Antlr3.Runtime.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\EntityFramework.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\EntityFramework.SqlServer.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.AI.Agent.Intercept.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.AI.DependencyCollector.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.AI.PerfCounterCollector.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.AI.ServerTelemetryChannel.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.AI.Web.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.AI.WindowsServer.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.ApplicationInsights.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.Core.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.Owin.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Cookies.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Facebook.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Google.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.OAuth.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Twitter.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.Web.Infrastructure.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Newtonsoft.Json.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Owin.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\System.Web.Helpers.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\System.Web.Mvc.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\System.Web.Optimization.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\System.Web.Razor.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\System.Web.WebPages.Deployment.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\System.Web.WebPages.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\System.Web.WebPages.Razor.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\WebGrease.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.AI.DependencyCollector.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.AI.ServerTelemetryChannel.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.AI.Web.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.AI.WindowsServer.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.ApplicationInsights.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\System.Web.Helpers.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\System.Web.Mvc.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\System.Web.Optimization.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\System.Web.Razor.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\System.Web.WebPages.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\System.Web.WebPages.Deployment.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\System.Web.WebPages.Razor.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Antlr3.Runtime.pdb
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Newtonsoft.Json.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\EntityFramework.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\EntityFramework.SqlServer.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.Core.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.Owin.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Facebook.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Cookies.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.OAuth.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Google.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Twitter.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\obj\Debug\EatHealthy.csprojResolveAssemblyReference.cache
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\obj\Debug\EatHealthy.csproj.CoreCompileInputs.cache
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\obj\Debug\EatHealthy.dll
+G:\EatHealthy v0.7\EatHealthy\EatHealthy\obj\Debug\EatHealthy.pdb
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\ApplicationInsights.config
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\roslyn\csc.exe
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\roslyn\vbc.exe
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\roslyn\VBCSCompiler.exe
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\EatHealthy.dll.config
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\EatHealthy.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\EatHealthy.pdb
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Antlr3.Runtime.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\EntityFramework.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\EntityFramework.SqlServer.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.AI.Web.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.Owin.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Newtonsoft.Json.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Owin.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\System.Web.Helpers.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\System.Web.Mvc.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\System.Web.Optimization.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\System.Web.Razor.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\System.Web.WebPages.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\System.Web.WebPages.Razor.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\WebGrease.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.AI.Web.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\System.Web.Helpers.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\System.Web.Mvc.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\System.Web.Optimization.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\System.Web.Razor.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\System.Web.WebPages.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\System.Web.WebPages.Razor.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Antlr3.Runtime.pdb
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Newtonsoft.Json.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\EntityFramework.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\EntityFramework.SqlServer.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.Owin.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\obj\Debug\EatHealthy.csprojResolveAssemblyReference.cache
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\obj\Debug\EatHealthy.csproj.CoreCompileInputs.cache
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\obj\Debug\EatHealthy.dll
+C:\Users\Alon\Downloads\EatHealthy v0.8_WithDBbackup\EatHealthy v0.8_WithDBbackup\EatHealthy\EatHealthy\obj\Debug\EatHealthy.pdb

@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+<p>Healthy mind in a healthy body</p>
+    <div style="display: flex; justify-content: space-between">
+        <div style="max-width: 400px; max-height: 500px; overflow-y: scroll;">
+            <a class="twitter-timeline" href="https://twitter.com/healthylife2472?ref_src=twsrc%5Etfw">Tweets by healthylife2472</a>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+        <div style="">
+            <canvas id="canvas" width="750" height="423" />
+        </div>
+    </div>
+
+<script>
+      var canvas = document.getElementById('canvas');
+      var context = canvas.getContext('2d');
+      var imageObj = new Image();
+
+      imageObj.onload = function() {
+        context.drawImage(imageObj,0 , 0);
+      };
+      imageObj.src = '../images/Healthy-Mind-in-a-Healthy-Body.jpg';
+</script>

@@ -1,0 +1,75 @@
+﻿@{
+    EatHealthy.Models.Client clnt = (EatHealthy.Models.Client)Session["Client"];
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/HealthStyle.css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("EatHealthy", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    
+                    <li>@Html.ActionLink("Posts", "Index", "Posts")</li>
+                    <li>@Html.ActionLink("Recommended Posts", "RecommendedPosts", "Posts")</li>
+                    @if (clnt != null && clnt.IsAdmin)
+                    {
+                        <li>@Html.ActionLink("Categories", "Index", "Categories")</li>
+                    }
+                    @if (clnt != null && clnt.IsAdmin)
+                    {
+                        <li>@Html.ActionLink("Clients", "Index", "Clients")</li>
+                    }
+                    @if (clnt != null && clnt.IsAdmin)
+                    {
+                        <li>@Html.ActionLink("Markers", "Index", "Markers")</li>
+                    }
+                    <li>@Html.ActionLink("Users Statistics", "Stats", "Clients")</li>
+                    <li>@Html.ActionLink("Posts Statistics", "Stats", "Posts")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content" style="padding-top: 10px; margin-top: 55px;">
+        @RenderBody()
+
+        <br /><br />
+        <iframe src="http://free.timeanddate.com/clock/i5xjfv16/n676/tlil/tt0" frameborder="0" width="282" height="19"></iframe>
+
+
+        <!-- Weather service -->
+
+        <hr />
+        <footer>
+            <center>
+                <p>&copy; @DateTime.Now.Year - EatHealthy </p>
+            </center>
+        </footer>
+    </div>
+    
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

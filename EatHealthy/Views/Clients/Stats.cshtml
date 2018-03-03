@@ -1,0 +1,110 @@
+﻿
+@model IEnumerable<EatHealthy.Models.UserPostsViewModel>
+    @{
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <h2>Statistics of the users</h2>
+    @{
+
+        // collections of users
+        var usersInfo = Model.Select(x => new
+        {
+            UserName = x.UserName,
+            FirstName = x.FirstName,
+            LastName = x.LastName,
+            ID = x.ID
+        }).Distinct();
+
+        // collection of users and there comments
+        var usersPostsInfo = usersInfo.Select(user => new
+        {
+            UserID = user.ID,
+            UserName =  user.UserName,
+            FirstName = user.FirstName,
+            LastName = user.LastName,
+            Posts = Model.Where(y => y.ID == user.ID).ToArray()
+        });
+
+        // collection of users and number of posts (for JSON phi data)
+        var usersReplayCount = usersPostsInfo.Select(x => new { Name = x.UserName, Count = x.Posts.Count() });
+        
+        }
+
+    <h2 class="page-title">@ViewBag.Title</h2>
+    <p>The most popular reviewers by how much they write posts.</p>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+        </tr>
+
+        @{
+            foreach (var user in usersPostsInfo)
+            {
+                <tr>
+                    <td>
+                        @user.UserName
+                    </td>
+                    <td>
+                        @user.FirstName
+                    </td>
+                    <td>
+                        @user.LastName
+                    </td>
+                    <td>
+                        <ul>
+                            @{
+                                // print posts for each user
+                                foreach (var post in user.Posts)
+                                {
+                                    <li>
+                                        @post.Title 
+                                        @Html.ActionLink(post.Title, "../Posts/DetailsByTitle", new { title = post.Title})
+                                    </li>
+                                }
+                            }
+                        </ul>
+                    </td>
+                </tr>
+                                }
+        }
+
+    </table>
+
+    <section id="popular-clients-graph">
+        <h3>Pie Chart</h3>
+    </section>
+
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="~/Scripts/graph.js"></script>
+    <script>
+        // print JSON data
+        var usersData = @Html.Raw(Json.Encode(usersReplayCount));
+        createPopularUsersGraph(usersData, "popular-clients-graph");
+    </script>
+
+<section>
+    <h3>Pie Chart</h3>
+    <div id="popular-gender-graph"></div>
+</section>
+<script>
+        // print JSON data
+        $.ajax({
+            url: '/Clients/GetGroupByGender',
+            success: function(data) {
+                createPopularUsersGraph(data, "popular-gender-graph");        
+            }
+        })
+</script>

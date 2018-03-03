@@ -1,0 +1,15 @@
+﻿@{
+    EatHealthy.Models.Client clnt = ((EatHealthy.Models.Client)Session["Client"]);
+}
+<ul class="nav navbar-nav navbar-right">
+    @if (clnt == null)
+    {
+        <li>@Html.ActionLink("Register", "Create", "Clients") </li>
+        <li>@Html.ActionLink("Login", "Login", "Clients") </li>
+    }
+    else
+    {
+        <li><a style="color: white !important; font-size: 18px;pointer-events:none;" href="#">Welcome @(clnt.FirstName + " " + clnt.LastName)</a></li>
+        <li>@Html.ActionLink("Log Out", "Logout", "Clients")</li>
+    }
+</ul>

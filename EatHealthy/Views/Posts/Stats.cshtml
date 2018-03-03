@@ -1,0 +1,82 @@
+﻿
+@model IEnumerable<EatHealthy.Models.PostCommentViewModel>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Statistics of the Posts</h2>
+@{
+
+    var postComments = Model;
+}
+
+<h2 class="page-title">@ViewBag.Title</h2>
+<p>The most popular reviewers by how much they write posts.</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfComment)
+        </th>
+    </tr>
+
+    @{
+        foreach (var post in postComments)
+        {
+            <tr>
+                <td>
+                    @post.Title
+                </td>
+                <td>
+                    @post.NumberOfComment
+                </td>
+            </tr>
+        }
+    }
+
+</table>
+
+<style>
+    .bar {
+        fill: steelblue;
+        transition: fill 3s;
+    }
+
+        .bar:hover {
+            fill: brown;
+        }
+
+    .axis {
+        font: 10px sans-serif;
+    }
+
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: #000;
+            shape-rendering: crispEdges;
+        }
+</style>
+<section id="popular-posts-graph">
+    <h3>Bar Chart</h3>
+</section>
+
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="~/Scripts/graph.js"></script>
+<script>
+    // print JSON data
+    $.ajax({
+        url: '/Posts/StatsJson',
+        success: function (result) {
+            var usersData = result;
+            createPopularPostsGraph(usersData);
+        },
+        error: function(hxr, status, err) {
+            console.log('status: ' + status + ', error: ' + err);
+        }
+    });
+
+</script>
