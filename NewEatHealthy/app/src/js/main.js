@@ -39,5 +39,13 @@ app.config(function($routeProvider) {
     })
     .when("/Contact", {
         templateUrl: "../content/contact.html"
+    })
+    .when("/UserStatistics", {
+        templateUrl: "../content/user_statistics.html",
+		controller: "UserStatisticsCtrl"
+    })
+    .when("/PostsStatistics", {
+        templateUrl: "../content/posts_statistics.html",
+		controller: "PostsStatisticsCtrl"
     });
 });

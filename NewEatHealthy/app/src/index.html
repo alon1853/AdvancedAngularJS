@@ -31,8 +31,8 @@
 					<li ng-if="$root.isCurrentUserAdmin()"><a href="/#!Clients">Clients</a></li>
 					<li ng-if="$root.isCurrentUserAdmin()"><a href="/#!Markers">Markers</a></li>
 					
-					<li><a href="Clients/Stats">Users Statistics</a></li>
-					<li><a href="Posts/Stats">Posts Statistics</a></li>	
+					<li><a href="/#!UserStatistics">Users Statistics</a></li>
+					<li><a href="/#!PostsStatistics">Posts Statistics</a></li>
 					<li><a href="/#!About">About</a></li>	
 					<li><a href="/#!Contact">Contact</a></li>					
                 </ul>
@@ -62,7 +62,7 @@
             </center>
         </footer>
     </div>
-
+	<script src="js/d3.v4.min.js"></script>
 	<script src="js/angular.min.js"></script>
 	<script src="js/angular-route.min.js"></script>
 	<script src="js/angular-cookies.min.js"></script>
@@ -76,5 +76,7 @@
 	<script src="controllers/categories.js"></script>
 	<script src="controllers/clients.js"></script>
 	<script src="controllers/markers.js"></script>
+	<script src="controllers/user_statistics.js"></script>
+	<script src="controllers/posts_statistics.js"></script>
 </body>
 </html>
