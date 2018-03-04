@@ -25,20 +25,20 @@
                 <ul class="nav navbar-nav">
                     
                     <li><a href="/#!Posts">Posts</a></li>	
-					<li><a href="Posts/RecommendedPosts">Recommended Posts</a></li>
+					<li><a href="/#!RecommendedPosts">Recommended Posts</a></li>
 					
-					<li ng-if="$root.isCurrentUserAdmin()"><a href="Categories/Index">Categories</a></li>
-					<li ng-if="$root.isCurrentUserAdmin()"><a href="Clients/Index">Clients</a></li>
-					<li ng-if="$root.isCurrentUserAdmin()"><a href="Markers/Index">Markers</a></li>
+					<li ng-if="$root.isCurrentUserAdmin()"><a href="/#!Categories">Categories</a></li>
+					<li ng-if="$root.isCurrentUserAdmin()"><a href="/#!Clients">Clients</a></li>
+					<li ng-if="$root.isCurrentUserAdmin()"><a href="/#!Markers">Markers</a></li>
 					
 					<li><a href="Clients/Stats">Users Statistics</a></li>
 					<li><a href="Posts/Stats">Posts Statistics</a></li>	
-					<li><a href="Home/About">About</a></li>	
+					<li><a href="/#!About">About</a></li>	
 					<li><a href="/#!Contact">Contact</a></li>					
                 </ul>
                
 				<ul class="nav navbar-nav navbar-right">
-					<li ng-if="$root.getCurrentUser() == undefined"><a href="Clients/Create">Register</a></li>	
+					<li ng-if="$root.getCurrentUser() == undefined"><a href="/#!Register">Register</a></li>	
 					<li ng-if="$root.getCurrentUser() == undefined"><a href="/#!Login">Login</a></li>
 					<li ng-if="$root.getCurrentUser() != undefined"><a style="color: white !important; font-size: 18px;pointer-events:none;" href="#">Welcome {{ $root.getCurrentUser().firstName + " " + $root.getCurrentUser().lastName }}</a></li>
 					<li ng-if="$root.getCurrentUser() != undefined"><a href="/#!" ng-click="logout()">Log Out</a></li>
@@ -69,7 +69,12 @@
 	<script src="js/main.js"></script>
 	<script src="controllers/index.js"></script>
 	<script src="controllers/login.js"></script>
+	<script src="controllers/register.js"></script>
 	<script src="controllers/home.js"></script>
 	<script src="controllers/posts.js"></script>
+	<script src="controllers/recommendedPosts.js"></script>
+	<script src="controllers/categories.js"></script>
+	<script src="controllers/clients.js"></script>
+	<script src="controllers/markers.js"></script>
 </body>
 </html>

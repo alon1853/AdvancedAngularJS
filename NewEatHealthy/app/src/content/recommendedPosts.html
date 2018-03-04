@@ -1,0 +1,49 @@
+<div ng-repeat="post in posts">
+	<section>
+		<article class="blogPost">
+			<header>
+				<h2>{{ post.category.name }}</h2>
+				<p>Posted on {{ post.creationDate }} by <a href="#">{{ post.client.clientName }}</a> - <a href="#comments">{{ post.comments.length }} Comments</a></p>
+			</header>
+			
+			<h3>
+				{{ post.title }}
+			</h3>
+			{{ post.content }}
+
+			<div ng-if="$root.isCurrentUserAdmin()">
+				<a href="#!/Posts/Edit/{{ post.id }}">Edit</a>
+				<a href="#!/Posts/Details/{{ post.id }}">Details</a>
+				<a href="#!/Posts/Delete/{{ post.id }}">Delete</a>
+			</div>
+
+		</article>
+	</section>
+	<section id="comments">
+		<h3>Comments</h3>
+		<article class="comment" ng-repeat="comment in post.comments">
+			<header>
+				<span>By <a href="#">{{ comment.client.clientName }}</a></span> at {{ comment.creationDate }}
+			</header>
+			{{ comment.content }}
+		</article>
+
+		<div ng-if="$root.getCurrentUser() != undefined">
+			<form action="PostComment">
+				<input type="hidden" name="clientId" value="{{ $root.getCurrentUser().id }}" />
+				<input type="hidden" name="postId" value="{{ post.id }}" />
+
+				<div>
+					Content: <input type="text" name="content" class="form-control" />
+				</div>
+
+				<div class="form-group">
+					<div style="margin-top: 10px;">
+						<input type="submit" value="Post" class="btn btn-default" />
+					</div>
+				</div>
+				<br />
+			</form>
+		</div>
+	</section>
+</div>

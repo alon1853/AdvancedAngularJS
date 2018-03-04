@@ -1,0 +1,93 @@
+<form name="searchCleintForm" ng-submit="searchClient()">
+    <div class="row">
+        <div class="form-group">
+            <div class="col-md-2">
+                User Name:
+            </div>
+            <div class="col-md-10">
+                <input type="text" name="username" ng-model="username"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <div class="col-md-2">
+                First Name:
+            </div>
+            <div class="col-md-10">
+                <input type="text" name="firstname" ng-model="firstname"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <div class="col-md-2">
+                Last Name:
+            </div>
+            <div class="col-md-10">
+                <input type="text" name="lastname" ng-model="lastname"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Search" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<p>
+	<a href="">Create New</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Gender
+        </th>
+        <th>
+            ClientName
+        </th>
+        <th>
+            FirstName
+        </th>
+        <th>
+            LastName
+        </th>
+        <th>
+            Password
+        </th>
+        <th>
+            IsAdmin
+        </th>
+        <th></th>
+    </tr>
+
+    <tr ng-repeat="client in clients">
+        <td>
+			{{ client.gender }}
+        </td>
+        <td>
+			{{ client.clientName }}
+        </td>
+        <td>
+			{{ client.firstName }}
+        </td>
+        <td>
+			{{ client.lastName }}
+        </td>
+        <td>
+			{{ client.password }}
+        </td>
+        <td>
+			{{ client.isAdmin }}
+        </td>
+        <td>
+			<a href="#!/Clients/Edit/{{ client.id }}">Edit</a>
+			<a href="#!/Clients/Details/{{ client.id }}">Details</a>
+			<a href="#!/Clients/Delete/{{ client.id }}">Delete</a>
+        </td>
+    </tr>
+
+</table>

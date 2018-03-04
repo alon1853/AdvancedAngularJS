@@ -1,0 +1,26 @@
+<h2>Index</h2>
+
+<p>
+    <a href="">Create New</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Category Name
+        </th>
+        <th></th>
+    </tr>
+
+    <tr ng-repeat="category in categories">
+        <td>
+			<p>{{ category.name }}</p>
+        </td>
+        <td>
+			<a href="#!/Categories/Edit/{{ category.id }}">Edit</a>
+			<a href="#!/Categories/Details/{{ category.id }}">Details</a>
+			<a href="#!/Categories/Delete/{{ category.id }}">Delete</a>
+	
+        </td>
+    </tr>
+
+</table>

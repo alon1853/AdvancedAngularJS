@@ -10,9 +10,29 @@ app.config(function($routeProvider) {
         templateUrl: "../content/login.html",
 		controller: "LoginCtrl"
     })
+	.when("/Register", {
+        templateUrl: "../content/register.html",
+		controller: "RegisterCtrl"
+    })
     .when("/Posts", {
         templateUrl: "../content/posts.html",
 		controller: "PostsCtrl"
+    })
+	.when("/RecommendedPosts", {
+        templateUrl: "../content/RecommendedPosts.html",
+		controller: "RecommendedPostsCtrl"
+    })
+	.when("/Categories", {
+        templateUrl: "../content/Categories.html",
+		controller: "CategoriesCtrl"
+    })
+	.when("/Clients", {
+        templateUrl: "../content/Clients.html",
+		controller: "ClientsCtrl"
+    })
+	.when("/Markers", {
+        templateUrl: "../content/Markers.html",
+		controller: "MarkersCtrl"
     })
     .when("/About", {
         templateUrl: "../content/about.html"

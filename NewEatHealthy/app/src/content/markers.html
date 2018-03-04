@@ -1,0 +1,48 @@
+<h2>Index</h2>
+<p>
+    <a href="">Create New</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Address
+        </th>
+        <th>
+            Latitude
+        </th>
+        <th>
+            Longtitude
+        </th>
+        <th>
+            Type
+        </th>
+        <th></th>
+    </tr>
+
+    <tr ng-repeat="marker in markers">
+        <td>
+			{{ marker.name }}
+        </td>
+        <td>
+            {{ marker.address }}
+        </td>
+        <td>
+            {{ marker.latitude }}
+        </td>
+        <td>
+            {{ marker.longtitude }}
+        </td>
+        <td>
+            {{ marker.type }}
+        </td>
+        <td>
+			<a href="#!/Markers/Edit/{{ marker.id }}">Edit</a>
+			<a href="#!/Markers/Details/{{ marker.id }}">Details</a>
+			<a href="#!/Markers/Delete/{{ marker.id }}">Delete</a>
+        </td>
+    </tr>
+
+</table>
