@@ -15,8 +15,12 @@ app.config(function($routeProvider) {
 		controller: "RegisterCtrl"
     })
     .when("/Posts", {
-        templateUrl: "../content/posts.html",
+        templateUrl: "../content/posts/posts.html",
 		controller: "PostsCtrl"
+    })
+	.when("/Posts/Edit", {
+        templateUrl: "../content/posts/edit.html",
+		controller: "EditPostsCtrl"
     })
 	.when("/RecommendedPosts", {
         templateUrl: "../content/RecommendedPosts.html",

@@ -60,7 +60,7 @@
 			{{ post.content }}
 
 			<div ng-if="$root.isCurrentUserAdmin()">
-				<a href="#!/Posts/Edit/{{ post.id }}">Edit</a>
+				<a ng-click="openEditPost(post)" href="/#!Posts/Edit">Edit</a>
 				<a href="#!/Posts/Details/{{ post.id }}">Details</a>
 				<a href="#!/Posts/Delete/{{ post.id }}">Delete</a>
 			</div>
@@ -76,7 +76,7 @@
 		</article>
 
 		<div ng-if="$root.getCurrentUser() != undefined">
-			<form action="PostComment">
+			<form action="PostComment" ng-submit="openEditPost()">
 				<input type="hidden" name="clientId" value="{{ $root.getCurrentUser().id }}" />
 				<input type="hidden" name="postId" value="{{ post.id }}" />
 
@@ -86,7 +86,7 @@
 
 				<div class="form-group">
 					<div style="margin-top: 10px;">
-						<input type="submit" value="Post" class="btn btn-default" />
+						<input type="submit" value="Post" class="btn btn-default" ng-click="openEditPost()"/>
 					</div>
 				</div>
 				<br />
