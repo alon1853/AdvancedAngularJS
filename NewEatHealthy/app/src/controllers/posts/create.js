@@ -1,7 +1,5 @@
-app.controller("PostsEditCtrl", function($scope, $rootScope, postsProperties) {
-	$scope.post = postsProperties.getPost();
-	
-	$scope.editPost = function() {
+app.controller("PostsCreateCtrl", function($scope, $rootScope) {
+	$scope.createPost = function() {
 		$scope.shouldShowInvalidCategory = false;
 		$scope.shouldShowInvalidTitle = false;
 		$scope.shouldShowInvalidContent = false;

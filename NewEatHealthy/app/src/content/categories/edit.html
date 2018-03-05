@@ -1,0 +1,23 @@
+<h2>Edit</h2>
+
+<form action="editCategory" ng-submit="saveEditedCategory()">
+    <div class="form-horizontal">
+        <h4>Category</h4>
+        <hr />
+        <div class="form-group">
+            <label class="control-label col-md-2">Category Name</label>
+            <input required type="text" class="form-control" ng-model="category" ng-value="selectedCategory.name">
+            <span ng-show="shouldShowInvalidCategory" class="text-danger field-validation-error">The Category field is required.</span>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" ng-click="saveEditedCategory()" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a href="/#!Categories">Back to list</a>
+</div>

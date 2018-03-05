@@ -1,4 +1,4 @@
-<a href="Posts/Create" ng-if="$root.getCurrentUser() != undefined">
+<a href="/#!Posts/Create" ng-if="$root.getCurrentUser() != undefined">
 	<button class="btn btn-primary" style="margin-bottom: 10px;">
 	   Create a new Post
 	</button>
@@ -60,9 +60,9 @@
 			{{ post.content }}
 
 			<div ng-if="$root.isCurrentUserAdmin()">
-				<a ng-click="openEditPost(post)" href="/#!Posts/Edit">Edit</a>
-				<a href="#!/Posts/Details/{{ post.id }}">Details</a>
-				<a href="#!/Posts/Delete/{{ post.id }}">Delete</a>
+				<a ng-click="setPostProperty(post)" href="/#!Posts/Edit">Edit</a> |
+				<a ng-click="setPostProperty(post)" href="#!/Posts/Details">Details</a> |
+				<a ng-click="setPostProperty(post)" href="#!/Posts/Delete">Delete</a>
 			</div>
 		</article>
 	</section>

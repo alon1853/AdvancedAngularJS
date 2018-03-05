@@ -1,0 +1,49 @@
+<h2>Details</h2>
+<div>
+    <h4>Post</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Client Name
+        </dt>
+
+        <dd>
+            {{ post.client.clientName }}
+        </dd>
+
+        <dt>
+            Category Name
+        </dt>
+
+        <dd>
+            {{ post.category.name }}
+        </dd>
+        <dt>
+            Tilte
+        </dt>
+
+        <dd>
+            {{ post.title }}
+        </dd>
+        <dt>
+            Content
+        </dt>
+
+        <dd>
+            {{ post.content }}
+        </dd>
+
+        <dt>
+            Creation Date
+        </dt>
+
+        <dd>
+            {{ post.creationDate }}
+        </dd>
+
+    </dl>
+</div>
+<p>
+	<a href="/#!Posts/Edit">Edit</a> |
+	<a href="/#!Posts">BackToList</a>
+</p>

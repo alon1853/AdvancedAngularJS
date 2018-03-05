@@ -1,9 +1,11 @@
-<h2>Edit</h2>
-<form name="signInForm" ng-submit="editPost()"> 
+
+<h2>Create</h2>
+
     <div class="form-horizontal">
         <h4>Post</h4>
         <hr />
-		<form name="signInForm" ng-submit="submitForm()">
+        
+        <form action="PostComment" ng-submit="openEditPost()">
 			<input type="hidden" name="clientId" value="@clnt.ID" />
 
 			<div class="form-group">
@@ -28,12 +30,12 @@
 
 			<div class="form-group">
 				<div class="col-md-offset-2 col-md-10">
-					<input type="submit" value="Save" class="btn btn-default" ng-click="editPost()"/>
+					<input type="submit" value="Create" class="btn btn-default" ng-click="createPost()"/>
 				</div>
 			</div>
-		</form>
+        </form>
     </div>
-</form>
+
 <div>
-	<a href="/#!Posts">Back to list</a>
+    <a href="/#!Posts">Back to list</a>
 </div>

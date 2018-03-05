@@ -1,12 +1,12 @@
-app.service('sharedProperties', function () {
-	var property = 'First';
+app.service('postsProperties', function () {
+	var post = 'First';
 
 	return {
-		getProperty: function () {
-			return property;
+		getPost: function () {
+			return post;
 		},
-		setProperty: function(value) {
-			property = value;
+		setPost: function(value) {
+			post = value;
 		}
 	};
 });

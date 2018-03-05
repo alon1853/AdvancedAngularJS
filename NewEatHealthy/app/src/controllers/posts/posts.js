@@ -1,4 +1,4 @@
-app.controller("PostsCtrl", function($scope, $location, sharedProperties) {	
+app.controller("PostsCtrl", function($scope, $location, postsProperties) {	
 	$scope.posts = [
 	{
 		id: 1,
@@ -20,8 +20,8 @@ app.controller("PostsCtrl", function($scope, $location, sharedProperties) {
 		content: "This is a long long content"
 	}];
 	
-	$scope.openEditPost = function(post) {
-		sharedProperties.setProperty(post);
+	$scope.setPostProperty = function(post) {
+		postsProperties.setPost(post);
 	};
 
 });
