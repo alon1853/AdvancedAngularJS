@@ -1,5 +1,5 @@
 app.factory('markersProperties', function () {
-	var marker = 'First';
+	var marker = {};
 
 	return {
 		getMarker: function () {

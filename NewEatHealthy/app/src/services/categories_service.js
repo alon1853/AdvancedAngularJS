@@ -1,5 +1,5 @@
 app.factory('categoriesProperties', function () {
-	var category = 'First';
+	var category = {};
 
 	return {
 		getCategory: function () {

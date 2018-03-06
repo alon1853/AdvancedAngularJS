@@ -20,19 +20,19 @@ app.config(function($routeProvider) {
     })
     .when("/Posts/Create", {
         templateUrl: "../views/posts/create.html",
-		controller: "PostsCreateCtrl"
+		controller: "PostsCtrl"
     })
 	.when("/Posts/Edit", {
         templateUrl: "../views/posts/edit.html",
-		controller: "PostsEditCtrl"
+		controller: "PostsCtrl"
     })
 	.when("/Posts/Details", {
         templateUrl: "../views/posts/details.html",
-		controller: "PostsDetailsCtrl"
+		controller: "PostsCtrl"
     })
     .when("/Posts/Delete", {
         templateUrl: "../views/posts/delete.html",
-		controller: "PostsDeleteCtrl"
+		controller: "PostsCtrl"
     })
 	.when("/RecommendedPosts", {
         templateUrl: "../views/RecommendedPosts.html",
