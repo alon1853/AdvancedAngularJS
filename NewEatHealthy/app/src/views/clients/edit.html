@@ -14,7 +14,7 @@
         <div class="form-group">
 			<label class="control-label col-md-2">First Name</label>
             <div class="col-md-10">
-				<input required type="text" class="form-control" ng-model="firstname" ng-value="selectedClient.firstName">
+				<input required type="text" class="form-control" ng-model="selectedClient.firstName">
 				<span ng-show="shouldShowInvalidFirstname" class="text-danger field-validation-error">The First Name field is required.</span>
             </div>
         </div>
@@ -22,7 +22,7 @@
         <div class="form-group">
 			<label class="control-label col-md-2">Last Name</label>
             <div class="col-md-10">
-				<input required type="text" class="form-control" ng-model="lastname" ng-value="selectedClient.lastName">
+				<input required type="text" class="form-control" ng-model="selectedClient.lastName">
 				<span ng-show="shouldShowInvalidLastname" class="text-danger field-validation-error">The Last Name field is required.</span>
             </div>
         </div>
@@ -30,7 +30,7 @@
         <div class="form-group">
 			<label class="control-label col-md-2">Client Name</label>
             <div class="col-md-10">
-				<input required type="text" class="form-control" ng-model="clientname" ng-value="selectedClient.clientName"> 
+				<input required type="text" class="form-control" ng-model="selectedClient.clientName"> 
 				<span ng-show="shouldShowInvalidClientname" class="text-danger field-validation-error">The Client Name field is required.</span>
             </div>
         </div>
@@ -38,7 +38,7 @@
         <div class="form-group">
 			<label class="control-label col-md-2">Password</label>
             <div class="col-md-10">
-				<input required type="password" class="form-control" ng-model="password" ng-value="selectedClient.password">
+				<input required type="password" class="form-control" ng-model="selectedClient.password">
 				<span ng-show="shouldShowInvalidPassword" class="text-danger field-validation-error">The Password field is required.</span>
             </div>
         </div>

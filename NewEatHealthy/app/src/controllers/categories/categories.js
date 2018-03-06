@@ -1,6 +1,6 @@
 app.controller("CategoriesCtrl", function($scope, $rootScope, categoriesProperties) {
 	$scope.selectedCategory = categoriesProperties.getCategory();
-	
+
 	$scope.categories = 
 	[
 		{ id: 1, name: "Animal" },
@@ -10,9 +10,8 @@ app.controller("CategoriesCtrl", function($scope, $rootScope, categoriesProperti
 	$scope.validateCategory = function() {
 		$scope.ShouldShowInvalidCategory = false;
 
-		if ($scope.category === undefined) {
+		if ($scope.selectedCategory == undefined || $scope.selectedCategory.name == undefined)
 			$scope.shouldShowInvalidCategory = true;
-		}
 		
 		return (!$scope.shouldShowInvalidCategory);
 	}
@@ -27,7 +26,6 @@ app.controller("CategoriesCtrl", function($scope, $rootScope, categoriesProperti
 
 	$scope.saveEditedCategory = function() {
 		if($scope.validateCategory()) {
-
 		}
 
 		

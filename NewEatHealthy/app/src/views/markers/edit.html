@@ -6,7 +6,7 @@
         <div class="form-group">
             <label class="control-label col-md-2">Name</label>
             <div class="col-md-10">
-                <input required type="text" class="form-control" ng-model="name" ng-value="selectedMarker.name">
+                <input required type="text" class="form-control" ng-model="selectedMarker.name" >
                 <span ng-show="shouldShowInvalidName" class="text-danger field-validation-error">The Name field is required.</span>
             </div>
         </div>
@@ -14,7 +14,7 @@
         <div class="form-group">
             <label class="control-label col-md-2">Address</label>
             <div class="col-md-10">
-                <input required type="text" class="form-control" ng-model="address" ng-value="selectedMarker.address">
+                <input required type="text" class="form-control" ng-model="selectedMarker.address">
                 <span ng-show="shouldShowInvalidAddress" class="text-danger field-validation-error">The Address field is required.</span>
             </div>
         </div>
@@ -22,7 +22,7 @@
         <div class="form-group">
             <label class="control-label col-md-2">Latitude</label>
             <div class="col-md-10">
-                <input required type="text" class="form-control" ng-model="latitude" ng-value="selectedMarker.latitude">
+                <input required type="text" class="form-control" ng-model="selectedMarker.latitude">
                 <span ng-show="shouldShowInvalidLatitude" class="text-danger field-validation-error">The Latitude field is required.</span>
             </div>
         </div>
@@ -30,7 +30,7 @@
         <div class="form-group">
             <label class="control-label col-md-2">Longtitude</label>
             <div class="col-md-10">
-                <input required type="text" class="form-control" ng-model="longitude" ng-value="selectedMarker.longitude">
+                <input required type="text" class="form-control" ng-model="selectedMarker.longitude">
                 <span ng-show="shouldShowInvalidLongitude" class="text-danger field-validation-error">The Longitude field is required.</span>
             </div>
         </div>
@@ -38,7 +38,7 @@
         <div class="form-group">
             <label class="control-label col-md-2">Type</label>
             <div class="col-md-10">
-                <input required type="text" class="form-control" ng-model="type" ng-value="selectedMarker.type">
+                <input required type="text" class="form-control" ng-model="selectedMarker.type">
                 <span ng-show="shouldShowInvalidType" class="text-danger field-validation-error">The Type field is required.</span>
             </div>
         </div>

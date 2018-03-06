@@ -14,23 +14,23 @@ app.controller("MarkersCtrl", function($scope, $rootScope, markersProperties) {
 		$scope.shouldShowInvalidLongitude = false;
 		$scope.shouldShowInvalidType= false;
 		
-		if ($scope.name === undefined) {
+		if ($scope.selectedMarker.name === undefined) {
 			$scope.shouldShowInvalidName = true;
 		}
 		
-		if ($scope.address === undefined) {
+		if ($scope.selectedMarker.address === undefined) {
 			$scope.shouldShowInvalidAddress = true;
 		}
 		
-		if ($scope.latitude === undefined) {
+		if ($scope.selectedMarker.latitude === undefined) {
 			$scope.shouldShowInvalidLatitude = true;
 		}
 		
-		if ($scope.longitude === undefined) {
+		if ($scope.selectedMarker.longitude === undefined) {
 			$scope.shouldShowInvalidLongitude = true;
 		}
 		
-		if ($scope.type === undefined) {
+		if ($scope.selectedMarker.type === undefined) {
 			$scope.shouldShowInvalidType = true;
 		}
 		

@@ -14,19 +14,19 @@ app.controller("ClientsCtrl", function($scope, $rootScope, clientsProperties) {
 		$scope.shouldShowInvalidClientname = false;
 		$scope.shouldShowInvalidPassword = false;
 		
-		if ($scope.gender === undefined)
+		if ($scope.selectedClient.gender === undefined)
 			$scope.shouldShowInvalidGender = true;
 		
-		if ($scope.firstname === undefined)
+		if ($scope.selectedClient.firstName === undefined)
 			$scope.shouldShowInvalidFirstname = true;
 		
-		if ($scope.lastname === undefined)
+		if ($scope.selectedClient.lastName === undefined)
 			$scope.shouldShowInvalidLastname = true;
 		
-		if ($scope.clientname === undefined)
+		if ($scope.selectedClient.clientName === undefined)
 			$scope.shouldShowInvalidClientname = true;
 		
-		if ($scope.password === undefined)
+		if ($scope.selectedClient.password === undefined)
 			$scope.shouldShowInvalidPassword = true;
 		
 		if (!$scope.shouldShowInvalidFirstname &&
