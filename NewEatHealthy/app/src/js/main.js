@@ -1,6 +1,6 @@
-const app = angular.module('EatHealthy', ["ngRoute", "ngCookies"]);
+const app = angular.module('EatHealthy', ["ngRoute", "ngCookies", "uiGmapgoogle-maps"]);
 
-app.config(function($routeProvider) {
+app.config(function($routeProvider, uiGmapGoogleMapApiProvider) {
     $routeProvider
     .when("/", {
         templateUrl: "../views/home.html",
@@ -98,7 +98,8 @@ app.config(function($routeProvider) {
         templateUrl: "../views/about.html"
     })
     .when("/Contact", {
-        templateUrl: "../views/contact.html"
+        templateUrl: "../views/contact.html",
+        controller: "ContactCtrl"
     })
     .when("/UserStatistics", {
         templateUrl: "../views/user_statistics.html",
@@ -107,5 +108,11 @@ app.config(function($routeProvider) {
     .when("/PostsStatistics", {
         templateUrl: "../views/posts_statistics.html",
 		controller: "PostsStatisticsCtrl"
+    });
+
+    uiGmapGoogleMapApiProvider.configure({
+        key: 'AIzaSyCRRx43HDWj3Ctj0htCj61beQyi2l5iEeQ',
+        v: '3.20', //defaults to latest 3.X anyhow
+        libraries: 'weather,geometry,visualization'
     });
 });
