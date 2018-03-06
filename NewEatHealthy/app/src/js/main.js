@@ -75,7 +75,23 @@ app.config(function($routeProvider) {
 		controller: "ClientsCtrl"
     })
 	.when("/Markers", {
-        templateUrl: "../views/Markers.html",
+        templateUrl: "../views/markers/markers.html",
+		controller: "MarkersCtrl"
+    })
+    .when("/Markers/Create", {
+        templateUrl: "../views/markers/create.html",
+		controller: "MarkersCtrl"
+    })
+    .when("/Markers/Edit", {
+        templateUrl: "../views/markers/edit.html",
+		controller: "MarkersCtrl"
+    })
+    .when("/Markers/Details", {
+        templateUrl: "../views/markers/details.html",
+		controller: "MarkersCtrl"
+    })
+    .when("/Markers/Delete", {
+        templateUrl: "../views/markers/delete.html",
 		controller: "MarkersCtrl"
     })
     .when("/About", {

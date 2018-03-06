@@ -33,7 +33,7 @@ app.controller("ClientsCtrl", function($scope, $rootScope, clientsProperties) {
 			!$scope.shouldShowInvalidLastname &&
 			!$scope.shouldShowInvalidClientname &&
 			!$scope.shouldShowInvalidPassword) {
-			
+
 		}
 		
 		return false;

@@ -1,0 +1,85 @@
+<h2>Create</h2>
+
+<script>
+    $(document).ready(function () {
+        $("form").submit(function () {
+            var form = $(this);
+            var serialized = form.serialize();
+            $.post("Create", serialized, function (data) {
+                // Check if the request was successful
+                if (data.includes("<h2>Index</h2>"))
+                {
+                    form.find("input:not(:last)").each(function () {
+                        $(this).val("");
+                    });
+
+                    $("#msg").html('<span style="color: green;">Marker added successfuly!!</span>');
+                }
+                else
+                {
+                    $("#msg").html('<span style="color: green;">Error adding marker</span>');
+                }
+            });
+
+            return false;
+        });
+    });
+</script>
+
+<form name="createMarkerForm" ng-submit="createMarker()">
+    <div class="form-horizontal">
+        <h4>Marker</h4>
+        <hr />
+        <div class="form-group">
+            <label class="control-label col-md-2">Name</label>
+            <div class="col-md-10">
+                <input required type="text" class="form-control" ng-model="name">
+                <span ng-show="shouldShowInvalidName" class="text-danger field-validation-error">The Name field is required.</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Address</label>
+            <div class="col-md-10">
+                <input required type="text" class="form-control" ng-model="address">
+                <span ng-show="shouldShowInvalidAddress" class="text-danger field-validation-error">The Address field is required.</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Latitude</label>
+            <div class="col-md-10">
+                <input required type="text" class="form-control" ng-model="latitude">
+                <span ng-show="shouldShowInvalidLatitude" class="text-danger field-validation-error">The Latitude field is required.</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Longtitude</label>
+            <div class="col-md-10">
+                <input required type="text" class="form-control" ng-model="longitude">
+                <span ng-show="shouldShowInvalidLongitude" class="text-danger field-validation-error">The Longitude field is required.</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Type</label>
+            <div class="col-md-10">
+                <input required type="text" class="form-control" ng-model="type">
+                <span ng-show="shouldShowInvalidType" class="text-danger field-validation-error">The Type field is required.</span>
+            </div>
+        </div>
+       
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" ng-click="createMarker()"/>
+            </div>
+        </div>
+    </div>
+
+    <div id="msg" style="font-size: 20px;"></div>
+</form>
+
+<div>
+    <a href="/#!Markers">Back to list</a>
+</div>

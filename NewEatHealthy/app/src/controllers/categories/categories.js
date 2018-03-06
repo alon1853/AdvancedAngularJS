@@ -7,14 +7,18 @@ app.controller("CategoriesCtrl", function($scope, $rootScope, categoriesProperti
 		{ id: 2, name: "Car" }
 	];
 
-	$scope.createCategory = function() {
+	$scope.validateCategory = function() {
 		$scope.ShouldShowInvalidCategory = false;
 
 		if ($scope.category === undefined) {
 			$scope.shouldShowInvalidCategory = true;
 		}
 		
-		if (!$scope.shouldShowInvalidCategory) {
+		return (!$scope.shouldShowInvalidCategory);
+	}
+
+	$scope.createCategory = function() {
+		if($scope.validateCategory()) {
 			
 		}
 		
@@ -22,15 +26,10 @@ app.controller("CategoriesCtrl", function($scope, $rootScope, categoriesProperti
 	}
 
 	$scope.saveEditedCategory = function() {
-		$scope.ShouldShowInvalidCategory = false;
+		if($scope.validateCategory()) {
 
-		if ($scope.category === undefined) {
-			$scope.shouldShowInvalidCategory = true;
 		}
-		
-		if (!$scope.shouldShowInvalidCategory) {
-			
-		}
+
 		
 		return false;
 	}

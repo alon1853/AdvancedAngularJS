@@ -1,6 +1,6 @@
 <h2>Index</h2>
 <p>
-    <a href="">Create New</a>
+    <a href="/#!Markers/Create">Create New</a>
 </p>
 <table class="table">
     <tr>
@@ -33,15 +33,15 @@
             {{ marker.latitude }}
         </td>
         <td>
-            {{ marker.longtitude }}
+            {{ marker.longitude }}
         </td>
         <td>
             {{ marker.type }}
         </td>
         <td>
-			<a href="#!/Markers/Edit/{{ marker.id }}">Edit</a>
-			<a href="#!/Markers/Details/{{ marker.id }}">Details</a>
-			<a href="#!/Markers/Delete/{{ marker.id }}">Delete</a>
+			<a ng-click="setSelectedMarker(marker)" href="#!/Markers/Edit">Edit</a> |
+			<a ng-click="setSelectedMarker(marker)" href="#!/Markers/Details">Details</a> |
+			<a ng-click="setSelectedMarker(marker)" href="#!/Markers/Delete">Delete</a>
         </td>
     </tr>
 
