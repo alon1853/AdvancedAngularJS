@@ -1,5 +1,5 @@
 app.service('postsProperties', function () {
-	var post = 'First';
+	var post = {};
 
 	return {
 		getPost: function () {

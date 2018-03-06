@@ -3,81 +3,81 @@ const app = angular.module('EatHealthy', ["ngRoute", "ngCookies"]);
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
-        templateUrl: "../content/home.html",
+        templateUrl: "../views/home.html",
 		controller: "HomeCtrl"
     })
 	.when("/Login", {
-        templateUrl: "../content/login.html",
+        templateUrl: "../views/login.html",
 		controller: "LoginCtrl"
     })
 	.when("/Register", {
-        templateUrl: "../content/register.html",
+        templateUrl: "../views/register.html",
 		controller: "RegisterCtrl"
     })
     .when("/Posts", {
-        templateUrl: "../content/posts/posts.html",
+        templateUrl: "../views/posts/posts.html",
 		controller: "PostsCtrl"
     })
     .when("/Posts/Create", {
-        templateUrl: "../content/posts/create.html",
+        templateUrl: "../views/posts/create.html",
 		controller: "PostsCreateCtrl"
     })
 	.when("/Posts/Edit", {
-        templateUrl: "../content/posts/edit.html",
+        templateUrl: "../views/posts/edit.html",
 		controller: "PostsEditCtrl"
     })
 	.when("/Posts/Details", {
-        templateUrl: "../content/posts/details.html",
+        templateUrl: "../views/posts/details.html",
 		controller: "PostsDetailsCtrl"
     })
     .when("/Posts/Delete", {
-        templateUrl: "../content/posts/delete.html",
+        templateUrl: "../views/posts/delete.html",
 		controller: "PostsDeleteCtrl"
     })
 	.when("/RecommendedPosts", {
-        templateUrl: "../content/RecommendedPosts.html",
+        templateUrl: "../views/RecommendedPosts.html",
 		controller: "RecommendedPostsCtrl"
     })
 	.when("/Categories", {
-        templateUrl: "../content/categories/categories.html",
+        templateUrl: "../views/categories/categories.html",
 		controller: "CategoriesCtrl"
     })
     .when("/Categories/Create", {
-        templateUrl: "../content/categories/create.html",
+        templateUrl: "../views/categories/create.html",
 		controller: "CategoriesCtrl"
     })
     .when("/Categories/Edit", {
-        templateUrl: "../content/categories/edit.html",
+        templateUrl: "../views/categories/edit.html",
 		controller: "CategoriesCtrl"
     })
     .when("/Categories/Details", {
-        templateUrl: "../content/categories/details.html",
+        templateUrl: "../views/categories/details.html",
 		controller: "CategoriesCtrl"
     })
     .when("/Categories/Delete", {
-        templateUrl: "../content/categories/delete.html",
+        templateUrl: "../views/categories/delete.html",
 		controller: "CategoriesCtrl"
     })
 	.when("/Clients", {
-        templateUrl: "../content/Clients.html",
+        templateUrl: "../views/Clients.html",
 		controller: "ClientsCtrl"
     })
 	.when("/Markers", {
-        templateUrl: "../content/Markers.html",
+        templateUrl: "../views/Markers.html",
 		controller: "MarkersCtrl"
     })
     .when("/About", {
-        templateUrl: "../content/about.html"
+        templateUrl: "../views/about.html"
     })
     .when("/Contact", {
-        templateUrl: "../content/contact.html"
+        templateUrl: "../views/contact.html"
     })
     .when("/UserStatistics", {
-        templateUrl: "../content/user_statistics.html",
+        templateUrl: "../views/user_statistics.html",
 		controller: "UserStatisticsCtrl"
     })
     .when("/PostsStatistics", {
-        templateUrl: "../content/posts_statistics.html",
+        templateUrl: "../views/posts_statistics.html",
 		controller: "PostsStatisticsCtrl"
     });
 });

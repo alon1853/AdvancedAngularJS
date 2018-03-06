@@ -66,52 +66,93 @@ app.post('/get_post_by_id', function (req, res) {
 })
 
 app.get('/posts', function (req, res) {
-    MongoClient.connect(url, function(err, db) {
-    if (err) throw err;
-    var dbo = db.db("EatHealthy");
-    dbo.collection("Posts").aggregate([
-        { $lookup:
-           {
-             from: 'Clients',
-             localField: 'ClientID',
-             foreignField: '_id',
-             as: 'client'
-           }
-         },
-         { $lookup:
-            {
-              from: 'Categories',
-              localField: 'CategoryID',
-              foreignField: '_id',
-              as: 'category'
-            }
-          },
-          { 
-            $project : { 
-                "_id" : 1,
-                "Title": 1,
-                "Content": 1,
-                "client.Name" : { "$arrayElemAt": [ "$client", 0 ] },
-                "category" : { "$arrayElemAt": [ "$category", 0 ] },
-                "CreationDate" : 1
-            }
+    // MongoClient.connect(url, function (err, db) {
+    //     if (err) throw err;
+    //     var dbo = db.db("EatHealthy");
+    //     dbo.collection("Posts").aggregate([
+    //         {
+    //             $lookup:
+    //                 {
+    //                     from: 'Clients',
+    //                     localField: 'ClientID',
+    //                     foreignField: '_id',
+    //                     as: 'client'
+    //                 }
+    //         },
+    //         {
+    //             $lookup:
+    //                 {
+    //                     from: 'Categories',
+    //                     localField: 'CategoryID',
+    //                     foreignField: '_id',
+    //                     as: 'category'
+    //                 }
+    //         },
+    //         {
+    //             $project: {
+    //                 "_id": 1,
+    //                 "Title": 1,
+    //                 "Content": 1,
+    //                 "client.Name": { "$arrayElemAt": ["$client", 0] },
+    //                 "category": { "$arrayElemAt": ["$category", 0] },
+    //                 "CreationDate": 1
+    //             }
+    //         },
+    //         {
+    //             $project: {
+    //                 "_id": 1,
+    //                 "Title": 1,
+    //                 "Content": 1,
+    //                 "client.FirstName": 1,
+    //                 "category.Name": 1,
+    //                 "CreationDate": 1
+    //             },
+    //         }]).toArray(function (err, result) {
+    //             if (err) throw err;
+    //             res.json(result);
+    //             console.log(result);
+    //             db.close();
+    //         });
+    // });
+    const result = [{
+        id: 1,
+        category: {
+            name: "Category Name"
+        },
+        creationDate: new Date(),
+        client: {
+            clientName: "Hanan"
+        },
+        comments: [{
+            client: {
+                clientName: "Hanan"
             },
-            { 
-                $project : { 
-                    "_id" : 1,
-                    "Title": 1,
-                    "Content": 1,
-                    "client.FirstName" : 1,
-                    "category.Name" : 1,
-                    "CreationDate" : 1
+            creationDate: new Date(),
+            content: "This is a long long content"
+        }],
+        title: "Post Title",
+        content: "This is a long long content"
+    },
+    {
+        id: 2,
+        category: {
+            name: "Category Name #2"
+        },
+        creationDate: new Date(),
+        client: {
+            clientName: "Liran"
+        },
+        comments: [{
+            client: {
+                clientName: "Liran"
             },
-        }]).toArray(function(err, result) {
-    if (err) throw err;
-    res.json(result);
-    console.log(result);
-    db.close();
-    });
-    });
+            creationDate: new Date(),
+            content: "This is a long long content"
+        }],
+        title: "Post Title",
+        content: "This is a long long content"
+    }];
+    res.send(JSON.stringify(result));
 })
 
 app.get("/clients", function(req, res) {

@@ -1,14 +1,21 @@
 app.factory('httpFactory', function ($http) {
     return {
         getRequest: getRequest,
-        putRequest : putRequest
+        putRequest : putRequest,
+        deleteRequest: deleteRequest
     }
 
-    function getRequest (url) {
-      return $http.get(url)
+    function getRequest(url, callback) {
+      $http.get(url).then(function(data) {
+        callback(data);
+      });
     }
 
     function putRequest (url, data) {
-        return $http.put(url, data)
-      }
+        $http.put(url, data);
+    }
+
+    function deleteRequest (url) {
+        $http.delete(url);
+    }
   });

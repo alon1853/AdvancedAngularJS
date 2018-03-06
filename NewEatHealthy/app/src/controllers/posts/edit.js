@@ -1,5 +1,6 @@
 app.controller("PostsEditCtrl", function($scope, $rootScope, postsProperties) {
 	$scope.post = postsProperties.getPost();
+	console.log($scope.post);
 	
 	$scope.editPost = function() {
 		$scope.shouldShowInvalidCategory = false;
