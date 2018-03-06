@@ -8,19 +8,19 @@ app.controller("PostsEditCtrl", function($scope, $rootScope, postsProperties) {
 		$scope.shouldShowInvalidTitle = false;
 		$scope.shouldShowInvalidContent = false;
 		
-		if ($scope.category === undefined)
+		if ($scope.post.category.name === undefined)
 			$scope.shouldShowInvalidCategory = true;
 		
-		if ($scope.title === undefined)
+		if ($scope.post.title === undefined)
 			$scope.shouldShowInvalidTitle = true;
 		
-		if ($scope.content === undefined)
+		if ($scope.post.content === undefined)
 			$scope.shouldShowInvalidContent = true;
 		
 		if (!$scope.shouldShowInvalidCategory && !$scope.shouldShowInvalidTitle && !$scope.shouldShowInvalidContent) {
 			
 		}
-		
+
 		return false;
 	}
 });
