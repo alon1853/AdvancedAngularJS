@@ -1,4 +1,4 @@
-app.service('postsProperties', function () {
+app.factory('postsProperties', function () {
 	var post = {};
 
 	return {

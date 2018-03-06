@@ -59,7 +59,19 @@ app.config(function($routeProvider) {
 		controller: "CategoriesCtrl"
     })
 	.when("/Clients", {
-        templateUrl: "../views/Clients.html",
+        templateUrl: "../views/clients/clients.html",
+		controller: "ClientsCtrl"
+    })
+    .when("/Clients/Edit", {
+        templateUrl: "../views/clients/edit.html",
+		controller: "ClientsCtrl"
+    })
+    .when("/Clients/Details", {
+        templateUrl: "../views/clients/details.html",
+		controller: "ClientsCtrl"
+    })
+    .when("/Clients/Delete", {
+        templateUrl: "../views/clients/delete.html",
 		controller: "ClientsCtrl"
     })
 	.when("/Markers", {

@@ -1,4 +1,4 @@
-app.service('categoriesProperties', function () {
+app.factory('categoriesProperties', function () {
 	var category = 'First';
 
 	return {
