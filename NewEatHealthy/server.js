@@ -12,8 +12,8 @@ const io = require('socket.io').listen(server);
 
 server.listen(3001);
 
-var count = 0;
 io.sockets.on('connection', function(client) {
+    var count = 0;
     var interval = setInterval(function(client) {
     client.emit('seconds', {data: ++count});
    }, 1000, client);
