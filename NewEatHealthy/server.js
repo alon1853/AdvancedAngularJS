@@ -130,7 +130,7 @@ app.get('/posts', function (req, res) {
     const result = [{
         id: 1,
         category: {
-            name: "Category Name"
+            name: "Car"
         },
         creationDate: new Date(),
         client: {
@@ -149,7 +149,7 @@ app.get('/posts', function (req, res) {
     {
         id: 2,
         category: {
-            name: "Category Name #2"
+            name: "Animal"
         },
         creationDate: new Date(),
         client: {

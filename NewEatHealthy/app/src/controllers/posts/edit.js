@@ -1,5 +1,6 @@
 app.controller("PostsEditCtrl", function($scope, $rootScope, postsProperties) {
 	$scope.post = postsProperties.getPost();
+	$scope.categories = ["Car", "Animal"] // Hanan : get categories from DB
 	console.log($scope.post);
 	
 	$scope.editPost = function() {
@@ -7,17 +8,14 @@ app.controller("PostsEditCtrl", function($scope, $rootScope, postsProperties) {
 		$scope.shouldShowInvalidTitle = false;
 		$scope.shouldShowInvalidContent = false;
 		
-		if ($scope.category === undefined) {
+		if ($scope.category === undefined)
 			$scope.shouldShowInvalidCategory = true;
-		}
 		
-		if ($scope.title === undefined) {
+		if ($scope.title === undefined)
 			$scope.shouldShowInvalidTitle = true;
-		}
 		
-		if ($scope.content === undefined) {
+		if ($scope.content === undefined)
 			$scope.shouldShowInvalidContent = true;
-		}
 		
 		if (!$scope.shouldShowInvalidCategory && !$scope.shouldShowInvalidTitle && !$scope.shouldShowInvalidContent) {
 			

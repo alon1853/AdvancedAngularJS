@@ -8,9 +8,7 @@
 
 			<div class="form-group">
 				<label class="control-label col-md-2">Category</label>
-				<select class = "form-control" ng-model="category">
-					<option value="male">Male</option>
-					<option value="female">Female</option>
+				<select class = "form-control" ng-model="post.category.name" ng-options="x for x in categories">
 				</select>
 				<span ng-show="shouldShowInvalidCategory" class="text-danger field-validation-error">The Category ID field is required.</span>
 			</div>
