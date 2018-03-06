@@ -1,10 +1,23 @@
 const express = require('express')
+const app = express()
 const MongoClient = require('mongodb').MongoClient
 const ObjectID = require('mongodb').ObjectID
 const bodyParser = require('body-parser');
-const app = express()
+
 const PORT = 3015
 const url = "mongodb://localhost:27017/"
+const http = require('http')
+const server = http.createServer(app)
+const io = require('socket.io').listen(server);
+
+server.listen(3001);
+
+var count = 0;
+io.sockets.on('connection', function(client) {
+    var interval = setInterval(function(client) {
+    client.emit('seconds', {data: ++count});
+   }, 1000, client);
+});
 
 app.use(express.static('app/src'))
 app.use(bodyParser.json()); // support json encoded bodies

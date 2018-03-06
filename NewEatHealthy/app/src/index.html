@@ -43,27 +43,31 @@
 					<li ng-if="$root.getCurrentUser() != undefined"><a style="color: white !important; font-size: 18px;pointer-events:none;" href="#">Welcome {{ $root.getCurrentUser().firstName + " " + $root.getCurrentUser().lastName }}</a></li>
 					<li ng-if="$root.getCurrentUser() != undefined"><a href="/#!" ng-click="logout()">Log Out</a></li>
 				</ul>
-            </div>
-        </div>
-    </div>
+			</div>
+
+		</div>
+	</div>
+
     <div class="container body-content" style="padding-top: 10px; margin-top: 55px;">
-         <ng-view></ng-view>
-
-        <br /><br />
-        <iframe src="http://free.timeanddate.com/clock/i5xjfv16/n676/tlil/tt0" frameborder="0" width="282" height="19"></iframe>
-
+        <ng-view></ng-view>
 
         <!-- Weather service -->
+		<br /><br />
+		<iframe src="http://free.timeanddate.com/clock/i5xjfv16/n676/tlil/tt0" frameborder="0" width="282" height="19"></iframe>
+		<br></br>
+		<div ng-controller="TimeCtrl"  width="282" height="19">{{ seconds }}</div>
 
         <hr />
         <footer>
             <center>
+
                 <p>&copy; 2018 - EatHealthy </p>
             </center>
         </footer>
 	</div>
 	
 	<!-- Libraries -->
+	<script src="http://localhost:3001/socket.io/socket.io.js"></script>
 	<script src="js/d3.v4.min.js"></script>
 	<script src="js/angular.min.js"></script>
 	<script src="js/angular-route.min.js"></script>

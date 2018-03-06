@@ -7,8 +7,11 @@ var express = require('express')
 
   server.listen(3001);
 
+
 io.sockets.on('connection', function(client) {
   console.log('Client connected, sending message');
 
-  client.emit('messages', {data: 'world'})
+  var interval = setInterval(function(client) {
+    client.emit('messages', {data: new Date()});
+  }, 1000, client);
 });

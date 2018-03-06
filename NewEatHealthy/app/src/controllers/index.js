@@ -1,4 +1,13 @@
+app.controller("TimeCtrl", function($scope, $rootScope) {
+	client = io.connect('http://localhost:3001');
+
+	client.on('seconds', function(data){
+		$scope.$apply(function() { $scope.seconds = data.data; });
+	});
+});
+
 app.controller("IndexCtrl", function($scope, $rootScope, $cookies) {
+	
 	$cookies.putObject("currentUser", { id: 3, firstName: "Roni", lastName: "Milner", isAdmin: true });
 	//$cookies.remove("currentUser");
 
