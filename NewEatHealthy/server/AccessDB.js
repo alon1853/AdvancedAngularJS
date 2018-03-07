@@ -153,6 +153,7 @@ insertPost: function (req_body, callback) {
   post.title = req_body.title
   post.content = req_body.content
   post.creationDate = req_body.creationDate
+},
 
 //   Category.findOne({'name': post.category}, {'_id': 1, 'name': 1}, function(err, category) {
 //     post.category = category;
