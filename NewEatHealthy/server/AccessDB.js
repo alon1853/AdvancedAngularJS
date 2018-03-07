@@ -278,10 +278,8 @@ insertClient: function (req_body, callback) {
 
   login: function(req_body, callback) {
     console.log('*** accessDB.login');
-    console.log(req_body);
     Client.find({$and: [{userName: req_body.userName}, {password: req_body.password} ]}).exec(function (err, docs) {
     console.log(docs);
-    // Client.findOne({'userName': req_body.userName, 'password': req_body.password},  {'userName': 1, 'firstName': 1, 'lastName': 1,'password': 1, 'gender': 1, 'isAdmin': 1}, function(err, client) {
     if (err) { return callback(err); }
 
       var client = docs[0]

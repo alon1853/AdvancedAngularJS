@@ -269,7 +269,6 @@ exports.login = function (req, res) {
        res.json({ });
      } else {
        console.log('*** login ok');
-       console.log(client);
 
        res.json({ client : client });
      }
