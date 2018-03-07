@@ -1,4 +1,4 @@
-app.controller("UserStatisticsCtrl", function($scope, $rootScope) {
+app.controller("UserStatisticsCtrl", function($scope, $rootScope, httpFactory) {
     $scope.generateUserPostsStatistics = function() {
         var svg = d3.select("#userStatistics"),
             width = +svg.attr("width"),
@@ -20,7 +20,7 @@ app.controller("UserStatisticsCtrl", function($scope, $rootScope) {
             .outerRadius(radius - 70)
             .innerRadius(radius - 100);
 
-        d3.csv("pie_user_posts.csv", function(d) {
+        d3.json($scope.clients, function(d) {
         d.posts = +d.posts;
         return d;
         }, function(error, data) {
@@ -63,7 +63,7 @@ app.controller("UserStatisticsCtrl", function($scope, $rootScope) {
             .outerRadius(radius - 70)
             .innerRadius(radius - 100);
 
-        d3.csv("pie_gender.csv", function(d) {
+        d3.json($scope.clients, function(d) {
         d.percent = +d.percent;
         return d;
         }, function(error, data) {
@@ -85,6 +85,9 @@ app.controller("UserStatisticsCtrl", function($scope, $rootScope) {
         });
     };
 
-    $scope.generateUserPostsStatistics();
-    $scope.generateGenderPostsStatistics();
+    httpFactory.getRequest("/clients", function(data) {
+        $scope.clients = data.data;
+        $scope.generateUserPostsStatistics();
+        $scope.generateGenderPostsStatistics();
+    })
 });
