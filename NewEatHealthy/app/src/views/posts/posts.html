@@ -51,7 +51,7 @@
 		<article class="blogPost">
 			<header>
 				<h2>{{ post.category.name }}</h2>
-				<p>Posted on {{ post.creationDate }} by <a href="#">{{ post.client.clientName }}</a> - <a href="#comments">{{ post.comments.length }} Comments</a></p>
+				<p>Posted on {{ post.creationDate }} by <a href="#">{{ post.client.userName }}</a> - <a href="#comments">{{ post.comments.length }} Comments</a></p>
 			</header>
 			
 			<h3>
@@ -70,7 +70,7 @@
 		<h3>Comments</h3>
 		<article class="comment" ng-repeat="comment in post.comments">
 			<header>
-				<span>By <a href="#">{{ comment.client.clientName }}</a></span> at {{ comment.creationDate }}
+				<span>By <a href="#">{{ comment.client.userName }}</a></span> at {{ comment.creationDate }}
 			</header>
 			{{ comment.content }}
 		</article>

@@ -29,7 +29,7 @@ app.controller("ClientsCtrl", function($scope, $rootScope, $window, $cookies, cl
 			return false;
 		}
 		
-		if ($scope.selectedClient.clientName === undefined || $scope.selectedClient.clientName == "") {
+		if ($scope.selectedClient.userName === undefined || $scope.selectedClient.userName == "") {
 			$scope.shouldShowInvalidClientname = true;
 			return false;
 		}

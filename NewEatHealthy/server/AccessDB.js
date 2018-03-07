@@ -92,7 +92,7 @@ module.exports = {
 insertClient: function (req_body, callback) {
   console.log('*** accessDB.insertClient');
   client = new Client();
-  client.userName = req_body.clientName
+  client.userName = req_body.userName
   client.firstName = req_body.firstName
   client.lastName = req_body.lastName
   client.gender = req_body.gender

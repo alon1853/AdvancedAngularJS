@@ -4,7 +4,7 @@
 	<hr />      
 	<form action="" ng-submit="createPost($event)">
 		<input type="hidden" name="clientId" value="@clnt.ID" />
-
+        <span style="color: green">{{ currentMessage }}</span>
 		<div class="form-group">
 			<label class="control-label col-md-2">CategoryID</label>
 			<select class = "form-control" ng-model="selectedPost.category" ng-options="x.name for x in categories">
