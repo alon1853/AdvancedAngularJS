@@ -1,24 +1,6 @@
 var db = require('../accessDB')
 //   , util = require('util');
 
-// GET
-exports.posts = function (req, res) {
-  console.log('*** posts');
-
-  db.getPosts(function(err, posts) {
-    if (err) {
-      console.log('*** posts err');
-      res.json({
-        posts: posts
-      });
-    } else {
-      console.log('*** posts ok');
-
-      res.json(posts);
-    }
-  });
-};
-
 exports.categories = function (req, res) {
   console.log('*** categories');
 
@@ -69,19 +51,6 @@ exports.markers = function (req, res) {
     }
   });
 };
-
-exports.addPost = function (req, res) {
-  console.log('*** addPost');
-  db.insertPost(req.body, function (err) {
-    if (err) {
-      console.log('*** addPost err');
-      res.json(false);
-    } else {
-      console.log('*** addPost ok');
-      res.json(req.body);
-    };
-  });
-}
 
 exports.addClient = function (req, res) {
   console.log('*** addClient');
@@ -192,6 +161,7 @@ exports.posts = function (req, res) {
       });
     } else {
       console.log('*** posts ok');
+      console.log('*** posts are' + posts);
 
       res.json(posts);
     }

@@ -1,6 +1,5 @@
 app.controller("PostsCtrl", function($scope, $location, $rootScope, postsProperties, httpFactory) {
 	$scope.selectedPost = postsProperties.getPost();
-
 	$scope.validatePost = function() {
 		$scope.shouldShowInvalidCategory = false;
 		$scope.shouldShowInvalidTitle = false;
@@ -26,17 +25,24 @@ app.controller("PostsCtrl", function($scope, $location, $rootScope, postsPropert
 
 	httpFactory.getRequest("/posts", function(data) {
 		$scope.posts = data.data;
+		console.log($scope.posts);
 	});
 
-	$scope.editPost = function() {
+	$scope.editPost = function(event) {
+		$scope.currentMessage = "";
+		console.log($scope.selectedPost)
 		if($scope.validatePost()) {
-			httpFactory.putRequest("", $scope.selectedPost);
+			httpFactory.putRequest("/posts/edit/"+$scope.selectedPost._id, $scope.selectedPost, function(data) {
+				$scope.currentMessage = "Posts edited successfully";
+			});
 		}
-		return false;
+
+		
+		event.preventDefault();
 	}
 
 	$scope.deletePost = function() {
-		httpFactory.deleteRequest("/posts/" + $scope.selectedPost.id);
+		httpFactory.deleteRequest("/posts/delete/" + $scope.selectedPost._id);
 	}
 
 	httpFactory.getRequest("/categories", function(data) {
@@ -81,6 +87,10 @@ app.controller("PostsCtrl", function($scope, $location, $rootScope, postsPropert
 	
 	$scope.setSelectedPost = function(post) {
 		postsProperties.setPost(post);
+	};
+
+	$scope.postComment = function(post) {
+		
 	};
 
 });

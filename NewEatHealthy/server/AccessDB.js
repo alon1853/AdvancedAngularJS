@@ -54,14 +54,6 @@ module.exports = {
         });
       },
 
-          // get all the markers
-    getPosts: function(callback) {
-      console.log('*** accessDB.getPosts');
-      Post.find({} , function(err, posts) {
-        callback(null, posts);
-      });
-    },
-
     // get all the categories
     // getClients: function(callback) {
     //     console.log('*** accessDB.getClients');
