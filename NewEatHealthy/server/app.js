@@ -26,20 +26,20 @@ app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 // LIST Post
-app.get("/Posts", api.posts);
+app.get("/posts", api.posts);
 
 // iNSERT Post
-app.post('/Posts/insert', api.addPost)
+app.post('/posts/insert', api.addPost)
 
 
 // UPDATE Post
-app.put('/Posts/edit/:id', api.editPost)
+app.put('/posts/edit/:id', api.editPost)
 
 // DELETE Post
-app.delete('/Posts/delete/:id', api.deletePost)
+app.delete('/posts/delete/:id', api.deletePost)
 
 // SEARCH Post
-app.get("/Posts/:id", function(req, res) {
+app.get("/posts/:id", function(req, res) {
 })
 
 // iNSERT CLIENT
