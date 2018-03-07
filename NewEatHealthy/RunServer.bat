@@ -1,1 +1,2 @@
-start node server.js
+cd server/
+node app.js
