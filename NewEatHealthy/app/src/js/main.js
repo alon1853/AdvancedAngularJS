@@ -95,7 +95,8 @@ app.config(function($routeProvider, uiGmapGoogleMapApiProvider) {
 		controller: "MarkersCtrl"
     })
     .when("/About", {
-        templateUrl: "../views/about.html"
+        templateUrl: "../views/about.html",
+        controller: "AboutCtrl"
     })
     .when("/Contact", {
         templateUrl: "../views/contact.html",
