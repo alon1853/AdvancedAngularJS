@@ -13,7 +13,7 @@ var mongoose = require('mongoose')
         type : String, required: true
     },
     password : {
-        type :  String, required: true
+        type : String, required: true
     },
     gender : {
         type : String , required: true
@@ -29,6 +29,15 @@ var mongoose = require('mongoose')
     // }]
   });
 
+  ClientSchema.pre('remove', function(next) {
+    // 'this' is the client being removed. Provide callbacks here if you want
+    // to be notified of the calls' result.
+    console.log("here")
+    Post.remove({'client': this._id}).exec();
+    Comment.remove({'client': this._id}).exec();
+    console.log(ClientSchema)
+    next();
+});
 exports.ClientSchema = ClientSchema;
 module.exports = mongoose.model('Client', ClientSchema);
 

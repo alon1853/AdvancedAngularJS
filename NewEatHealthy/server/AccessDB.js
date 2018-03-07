@@ -76,9 +76,10 @@ module.exports = {
     // get all the clients
     getClients: function(callback) {
         console.log('*** accessDB.getClients');
-        Client.find().populate("comments").populate("posts").exec(function(err, result) {
-          callback(null, result);
-        });
+
+          Client.find().populate("comments").populate("posts").exec(function(err, result) {
+            callback(null, result);
+          });
       },
     
 
@@ -104,6 +105,7 @@ insertClient: function (req_body, callback) {
   client = new Client();
   client.userName = req_body.userName
   client.firstName = req_body.firstName
+  client.password = req_body.password
   client.lastName = req_body.lastName
   client.gender = req_body.gender
   client.isAdmin = req_body.isAdmin
@@ -116,12 +118,41 @@ insertClient: function (req_body, callback) {
   });
 },
 
-// insertPost: function (req_body, callback) {
-//   console.log('*** accessDB.insertPost');
-//   post = new Post();
-//   post.title = req_body.title
-//   post.content = req_body.content
-//   post.creationDate = req_body.creationDate
+editClient: function(id, req_body, callback) {
+  console.log('*** accessDB.editClient');
+
+  Client.findOne({'_id': id}, {}, function(err, client) {
+    if (err) { return callback(err); }
+
+    client.userName = req_body.clientName
+    client.firstName = req_body.firstName
+    client.password = req_body.password
+    client.lastName = req_body.lastName
+    client.gender = req_body.gender
+    client.isAdmin = req_body.isAdmin
+
+    client.save(function(err) {
+      if (err) { console.log('*** accessDB.editClient err: ' + err); return callback(err); }
+
+      callback(null);
+    });
+
+  });
+},
+
+deleteClient: function(id, callback) {
+  console.log('*** accessDB.deleteClient');
+  Client.remove({'_id': id}, function(err, client) {
+    callback(null);
+  });
+},
+
+insertPost: function (req_body, callback) {
+  console.log('*** accessDB.insertPost');
+  post = new Post();
+  post.title = req_body.title
+  post.content = req_body.content
+  post.creationDate = req_body.creationDate
 
 //   Category.findOne({'name': post.category}, {'_id': 1, 'name': 1}, function(err, category) {
 //     post.category = category;

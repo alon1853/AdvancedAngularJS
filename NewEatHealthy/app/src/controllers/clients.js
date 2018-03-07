@@ -1,7 +1,8 @@
 app.controller("ClientsCtrl", function($scope, $rootScope, $window, $cookies, clientsProperties, httpFactory) {
 	$scope.selectedClient = clientsProperties.getClient();
+	$scope.searchParams = {}
 
-	httpFactory.getRequest("/clients", function(data) {
+	httpFactory.getRequest("/clients/"+undefined+"/"+undefined+"/"+undefined, function(data) {
 		$scope.clients = data.data;
 	});
 
@@ -74,7 +75,9 @@ app.controller("ClientsCtrl", function($scope, $rootScope, $window, $cookies, cl
 	}
 
 	$scope.searchClient = function() {
-
+		httpFactory.getRequest("/clients/"+$scope.searchParams.clientName+"/"+$scope.searchParams.firstName+"/"+$scope.searchParams.lastName, function(data) {
+			$scope.clients = data.data;
+		});
 	}
 	
 	$scope.setSelectedClient = function(client) {

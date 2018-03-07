@@ -45,12 +45,10 @@ app.get("/posts/:id", function(req, res) {
 app.post('/clients/insert', api.addClient);
 
 // UPDATE CLIENT
-app.put('/clients/put/:id', function (req, res) {
-})
+app.put('/clients/edit/:id', api.editClient);
 
 // DELETE CLIENT
-app.delete('/clients/delete/:id', function (req, res) {
-})
+app.delete('/clients/delete/:id', api.deleteClient);
 
 // SEARCH CLIENTS
 app.get("/clients/:id", function(req, res) {

@@ -65,6 +65,34 @@ exports.addClient = function (req, res) {
   });
 }
 
+exports.editClient = function (req, res) {
+  console.log('*** editClient');
+
+   db.editClient(req.params.id, req.body, function (err) {
+     if (err) {
+       console.log('*** editClient err');
+       res.json({ 'status': false });
+     } else {
+       console.log('*** editClient ok');
+
+       res.json({ 'status': true });
+     }
+   });
+ };
+
+exports.deleteClient = function (req, res) {
+  console.log('*** deleteClient');
+  db.deleteClient(req.params.id, function(err) {
+    if (err) {
+      console.log('*** deleteClient err');
+      res.json({'status': false});
+    } else {
+      console.log('*** deleteClient ok');
+      res.json({'status': true});
+    }
+  });
+}
+
 
 exports.addMarker = function (req, res) {
   console.log('*** addMarker');
