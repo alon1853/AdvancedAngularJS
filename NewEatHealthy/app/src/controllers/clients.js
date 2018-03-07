@@ -2,7 +2,7 @@ app.controller("ClientsCtrl", function($scope, $rootScope, $window, $cookies, cl
 	$scope.selectedClient = clientsProperties.getClient();
 	$scope.searchParams = {}
 
-	httpFactory.getRequest("/clients/"+undefined+"/"+undefined+"/"+undefined, function(data) {
+	httpFactory.getRequest("/clients", function(data) {
 		$scope.clients = data.data;
 	});
 
