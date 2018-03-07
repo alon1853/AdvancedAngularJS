@@ -137,6 +137,66 @@ exports.deleteCategory = function (req, res) {
   });
 };
 
+exports.posts = function (req, res) {
+  console.log('*** posts');
+
+  db.getPosts(function(err, posts) {
+    if (err) {
+      console.log('*** posts err');
+      res.json({
+        posts: posts
+      });
+    } else {
+      console.log('*** posts ok');
+
+      res.json(posts);
+    }
+  });
+};
+
+exports.addPost = function (req, res) {
+  console.log('*** addPost');
+  db.insertPost(req.body, function (err) {
+    if (err) {
+      console.log('*** addPost err');
+      res.json(false);
+    } else {
+      console.log('*** addPost ok');
+      res.json(req.body);
+    };
+  });
+}
+
+exports.editPost = function (req, res) {
+  console.log('*** editPost');
+
+   db.editPost(req.params.id, req.body, function (err) {
+     if (err) {
+       console.log('*** editPost err' + util.inspect(err));
+       res.json({ 'status': false });
+     } else {
+       console.log('*** editPost ok');
+
+       res.json({ 'status': true });
+     }
+   });
+ };
+
+ exports.deletePost = function (req, res) {
+  console.log('*** deletePost');
+
+  db.deletePost(req.params.id, function(err) {
+    if (err) {
+      console.log('*** deletePost err');
+      res.json({'status': false});
+    } else {
+      console.log('*** deletePost ok');
+      res.json({'status': true});
+    }
+  });
+};
+
+
 // GET
 exports.states = function (req, res) {
   console.log('*** states');

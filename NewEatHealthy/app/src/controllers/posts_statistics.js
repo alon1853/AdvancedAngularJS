@@ -40,7 +40,7 @@ app.controller("PostsStatisticsCtrl", function($scope, $rootScope, httpFactory) 
         });
     };
     $scope.generateUserStatistics();
-
+    
     httpFactory.getRequest("/posts", function(data) {
         $scope.posts = data.data;
     })

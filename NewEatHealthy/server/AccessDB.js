@@ -37,13 +37,21 @@ module.exports = {
     });
   },
 
-    // get all the categories
+    // get all the markers
     getMarkers: function(callback) {
         console.log('*** accessDB.getMarkers');
         Marker.find({} , function(err, markers) {
           callback(null, markers);
         });
       },
+
+          // get all the markers
+    getPosts: function(callback) {
+      console.log('*** accessDB.getPosts');
+      Post.find({} , function(err, posts) {
+        callback(null, posts);
+      });
+    },
 
     // get all the categories
     // getClients: function(callback) {
@@ -54,7 +62,7 @@ module.exports = {
     //     });
     //   },
 
-    // get all the categories
+    // get all the clients
     getClients: function(callback) {
         console.log('*** accessDB.getClients');
         Client.find().populate("comments").populate("posts").exec(function(err, result) {
@@ -158,6 +166,53 @@ module.exports = {
   deleteCategory: function(id, callback) {
     console.log('*** accessDB.deleteCategory');
     Category.remove({'_id': id}, function(err, category) {
+      callback(null);
+    });
+  },
+
+  insertPost: function (req_body, callback) {
+    console.log('*** accessDB.insertPost');
+    post = new Post();
+    post.title = req_body.title
+    post.content = req_body.content
+    post.creationDate = req_body.creationDate
+    post.category = req_body.category
+    post.client = req_body.client
+    post.comments = req_body.comments
+    post._id = new ObjectID(); // The id is calculated by the Mongoose pre 'save'.
+
+    post.save(function (err, post) {
+      if (err) { console.log('*** new post save err: ' + err); return callback(err); }
+
+      callback(null, post._id);
+    });
+  },
+
+  editPost: function(id, req_body, callback) {
+    console.log('*** accessDB.editPost');
+
+    Post.findOne({'_id': id}, {'_id': 1, 'title': 1, 'content': 1, 'creationDate': 1, 'category': 1, 'client': 1, 'comments': 1}, function(err, post) {
+      if (err) { return callback(err); }
+
+      post.title = req_body.title
+      post.content = req_body.content
+      post.creationDate = req_body.creationDate
+      post.category = req_body.category
+      post.client = req_body.client
+      post.comments = req_body.comments
+
+      post.save(function(err) {
+        if (err) { console.log('*** accessDB.editPost err: ' + err); return callback(err); }
+
+        callback(null);
+      });
+
+    });
+  },
+
+  deletePost: function(id, callback) {
+    console.log('*** accessDB.deletePost');
+    Post.remove({'_id': id}, function(err, post) {
       callback(null);
     });
   },

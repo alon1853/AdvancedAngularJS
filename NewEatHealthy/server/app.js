@@ -25,21 +25,20 @@ app.use(express.static('../app/src'))
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
-// POST BY ID
-app.get('/posts/:id', function (req, res) // api.
-{
-})
+// LIST Post
+app.get("/Posts", api.posts);
 
-// LIST POST
-// app.get('/posts', )
+// iNSERT Post
+app.post('/Posts/insert', api.addPost)
 
-// DELETE POST
-app.delete('/posts/:id', function (req, res) {
+// UPDATE Post
+app.put('/Posts/edit/:id', api.editPost)
 
-})
+// DELETE Post
+app.delete('/Posts/delete/:id', api.deletePost)
 
-// UPDATE POST 
-app.put('/posts/put/:id', function (req, res) {
+// SEARCH Post
+app.get("/Posts/:id", function(req, res) {
 })
 
 // iNSERT CLIENT
