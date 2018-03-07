@@ -274,8 +274,23 @@ insertClient: function (req_body, callback) {
       console.log(posts);
       callback(null, posts);
     });
-  }
+  },
 
+  login: function(req_body, callback) {
+    console.log('*** accessDB.login');
+    console.log(req_body);
+    Client.find({$and: [{userName: req_body.userName}, {password: req_body.password} ]}).exec(function (err, docs) {
+    console.log(docs);
+    // Client.findOne({'userName': req_body.userName, 'password': req_body.password},  {'userName': 1, 'firstName': 1, 'lastName': 1,'password': 1, 'gender': 1, 'isAdmin': 1}, function(err, client) {
+    if (err) { return callback(err); }
+
+      var client = docs[0]
+      callback(null, client);
+
+    });
+  },
+ 
+}
   // { "_id" : ObjectId("5aa036d43e8521fa1a8127b1"), "client_" : ObjectId("5a9b1e5d009411de018d0c2f"),
   //  "post_" : ObjectId("5a9b25a0009411de018d0c30"), 
   // "content" : "מה אני עושה פה בכלל", "creationDate" : ISODate("2017-10-25T18:30:00Z") }
@@ -316,4 +331,4 @@ insertClient: function (req_body, callback) {
 //       callback(null, state);
 //     });
 //   }
-}
+

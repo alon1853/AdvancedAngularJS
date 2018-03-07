@@ -161,7 +161,7 @@ exports.posts = function (req, res) {
       });
     } else {
       console.log('*** posts ok');
-      console.log('*** posts are' + posts);
+      console.log('*** posts are ' + posts);
 
       res.json(posts);
     }
@@ -260,6 +260,21 @@ exports.checkemail = function (req, res) {
   });
 };
 
+exports.login = function (req, res) {
+  console.log('*** login');
+
+   db.login(req.body, function (err, client) {
+     if (err) {
+       console.log('*** login err');
+       res.json({ });
+     } else {
+       console.log('*** login ok');
+       console.log(client);
+
+       res.json({ client : client });
+     }
+   });
+ };
 
 
 

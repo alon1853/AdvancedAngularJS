@@ -1,5 +1,5 @@
-app.controller("LoginCtrl", function($scope, $rootScope, $location, $cookies) {
-	$scope.submitForm = function() {
+app.controller("LoginCtrl", function($scope, $rootScope, $location, $cookies, httpFactory) {
+	$scope.submitForm = function(event) {
 		$scope.shouldShowInvalidUsername = false;
 		$scope.shouldShowInvalidPassword = false;
 		
@@ -13,10 +13,17 @@ app.controller("LoginCtrl", function($scope, $rootScope, $location, $cookies) {
 		}
 		
 		if (!$scope.shouldShowInvalidUsername && !$scope.shouldShowInvalidPassword) {
-			$cookies.putObject("currentUser", { id: 3, firstName: $scope.username, lastName: $scope.username, isAdmin: true });
-			$location.path( "/" );
+			//$cookies.putObject("currentUser", { id: 3, firstName: $scope.username, lastName: $scope.username, isAdmin: true });
+			var data = {'userName': $scope.username, 'password': $scope.password}
+
+			httpFactory.postRequest("/login", data, function(data) {
+				console.log(data);
+			});
+			//$location.path( "/" );
+			
 		}
 		
-		return false;
+		
+		event.preventDefault();
 	};
 });
