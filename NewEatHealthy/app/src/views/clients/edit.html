@@ -1,8 +1,9 @@
 <h2>Edit</h2>
-<form name="editClientForm" ng-submit="saveEditedClient()">
+<form action="" ng-submit="saveEditedClient($event)">
         <h4>Client</h4>
         <hr />
         <div class="form-group">
+            <span style="color: green">{{ currentMessage }}</span>
 			<label class="control-label col-md-2">Gender</label>
             <div class="col-md-10">
 				<select class = "form-control" ng-model="selectedClient.gender" ng-options="x for x in genders">
@@ -14,7 +15,7 @@
         <div class="form-group">
 			<label class="control-label col-md-2">First Name</label>
             <div class="col-md-10">
-				<input required type="text" class="form-control" ng-model="selectedClient.firstName">
+				<input type="text" class="form-control" ng-model="selectedClient.firstName">
 				<span ng-show="shouldShowInvalidFirstname" class="text-danger field-validation-error">The First Name field is required.</span>
             </div>
         </div>
@@ -22,7 +23,7 @@
         <div class="form-group">
 			<label class="control-label col-md-2">Last Name</label>
             <div class="col-md-10">
-				<input required type="text" class="form-control" ng-model="selectedClient.lastName">
+				<input type="text" class="form-control" ng-model="selectedClient.lastName">
 				<span ng-show="shouldShowInvalidLastname" class="text-danger field-validation-error">The Last Name field is required.</span>
             </div>
         </div>
@@ -30,7 +31,7 @@
         <div class="form-group">
 			<label class="control-label col-md-2">Client Name</label>
             <div class="col-md-10">
-				<input required type="text" class="form-control" ng-model="selectedClient.clientName"> 
+				<input type="text" class="form-control" ng-model="selectedClient.clientName"> 
 				<span ng-show="shouldShowInvalidClientname" class="text-danger field-validation-error">The Client Name field is required.</span>
             </div>
         </div>
@@ -38,7 +39,7 @@
         <div class="form-group">
 			<label class="control-label col-md-2">Password</label>
             <div class="col-md-10">
-				<input required type="password" class="form-control" ng-model="selectedClient.password">
+				<input type="password" class="form-control" ng-model="selectedClient.password">
 				<span ng-show="shouldShowInvalidPassword" class="text-danger field-validation-error">The Password field is required.</span>
             </div>
         </div>
@@ -46,12 +47,12 @@
         <div class="form-group">
 			<label class="control-label col-md-2">IsAdmin</label>
             <div class="col-md-10">
-					<input type="checkbox" ng-model="selectedClient.isAdmin">
+				<input type="checkbox" ng-model="selectedClient.isAdmin">
             </div>
         </div>
         <div class="form-group">
             <div class="col-md-10">
-				<input type="submit" class="btn btn-default" value="Save" ng-click="saveEditedClient()" />
+				<input type="submit" class="btn btn-default" value="Save" />
             </div>
         </div>
     </div>

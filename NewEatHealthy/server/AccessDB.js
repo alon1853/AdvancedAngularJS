@@ -29,6 +29,15 @@ module.exports = {
     mongoose.disconnect();
   },
 
+    // get all the posts
+    getPosts: function(callback) {
+      console.log('*** accessDB.getPosts');
+      Post.find({} , function(err, posts) {
+        callback(null, posts);
+      });
+    },
+
+    
   // get all the categories
   getCategories: function(callback) {
     console.log('*** accessDB.getCategories');
@@ -87,6 +96,44 @@ module.exports = {
 //       callback(null, customer[0]);
 //     });
 //   },
+
+insertClient: function (req_body, callback) {
+  console.log('*** accessDB.insertClient');
+  client = new Client();
+  client.userName = req_body.clientName
+  client.firstName = req_body.firstName
+  client.lastName = req_body.lastName
+  client.gender = req_body.gender
+  client.isAdmin = req_body.isAdmin
+  
+  client._id = new ObjectID(); // The id is calculated by the Mongoose pre 'save'.
+
+  client.save(function (err, client) {
+    if (err) { console.log('*** new client save err: ' + err); return callback(err, null); }
+    callback(null, client);
+  });
+},
+
+insertPost: function (req_body, callback) {
+  console.log('*** accessDB.insertPost');
+  post = new Post();
+  post.title = req_body.title
+  post.content = req_body.content
+  post.creationDate = req_body.creationDate
+
+  Category.findOne({'name': post.category}, {'_id': 1, 'name': 1}, function(err, category) {
+    post.category = category;
+    if (err) { return callback(err); }
+    });
+
+  post._id = new ObjectID(); // The id is calculated by the Mongoose pre 'save'.
+
+  post.save(function (err, post) {
+    if (err) { console.log('*** new post save err: ' + err); return callback(err); }
+
+    callback(null, post._id);
+  });
+},
 
   insertMarker: function (req_body, callback) {
     console.log('*** accessDB.insertMarker');

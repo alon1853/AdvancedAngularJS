@@ -16,7 +16,7 @@ var mongoose = require('mongoose')
         type : String , required: true
     },
     isAdmin : {
-        type :  Boolean, required: true
+        type :  Boolean, default: false
     },
     posts : [{
          type: Schema.Types.ObjectId, ref: 'Post' 

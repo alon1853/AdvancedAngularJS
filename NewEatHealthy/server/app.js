@@ -31,6 +31,7 @@ app.get("/Posts", api.posts);
 // iNSERT Post
 app.post('/Posts/insert', api.addPost)
 
+
 // UPDATE Post
 app.put('/Posts/edit/:id', api.editPost)
 
@@ -42,9 +43,7 @@ app.get("/Posts/:id", function(req, res) {
 })
 
 // iNSERT CLIENT
-app.post('/clients/insert', function (req, res) {
-
-})
+app.post('/clients/insert', api.addClient);
 
 // UPDATE CLIENT
 app.put('/clients/put/:id', function (req, res) {

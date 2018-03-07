@@ -1,11 +1,11 @@
 app.factory('clientsProperties', function () {
-	var client = 'First';
+	var client = {};
 
 	return {
-		getCategory: function () {
+		getClient: function () {
 			return client;
 		},
-		setCategory: function(value) {
+		setClient: function(value) {
 			client = value;
 		}
 	};

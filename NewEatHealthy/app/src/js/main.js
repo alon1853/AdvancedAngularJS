@@ -11,8 +11,8 @@ app.config(function($routeProvider, uiGmapGoogleMapApiProvider) {
 		controller: "LoginCtrl"
     })
 	.when("/Register", {
-        templateUrl: "../views/register.html",
-		controller: "RegisterCtrl"
+        templateUrl: "../views/clients/register.html",
+		controller: "ClientsCtrl"
     })
     .when("/Posts", {
         templateUrl: "../views/posts/posts.html",

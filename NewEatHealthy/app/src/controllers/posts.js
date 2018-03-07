@@ -1,4 +1,4 @@
-app.controller("PostsCtrl", function($scope, $location, postsProperties, httpFactory) {
+app.controller("PostsCtrl", function($scope, $location, $rootScope, postsProperties, httpFactory) {
 	$scope.selectedPost = postsProperties.getPost();
 
 	$scope.validatePost = function() {
@@ -6,16 +6,22 @@ app.controller("PostsCtrl", function($scope, $location, postsProperties, httpFac
 		$scope.shouldShowInvalidTitle = false;
 		$scope.shouldShowInvalidContent = false;
 		
-		if ($scope.selectedPost.category === undefined || $scope.selectedPost.category.name === undefined)
+		if ($scope.selectedPost.category === undefined || $scope.selectedPost.category == "") {
 			$scope.shouldShowInvalidCategory = true;
-		
-		if ($scope.selectedPost.title === undefined)
+			return false;
+		}
+
+		if ($scope.selectedPost.title === undefined || $scope.selectedPost.title == "") {
 			$scope.shouldShowInvalidTitle = true;
+			return false;
+		}
 		
-		if ($scope.selectedPost.content === undefined)
+		if ($scope.selectedPost.content === undefined || $scope.selectedPost.content == "") {
 			$scope.shouldShowInvalidContent = true;
-		
-		return (!$scope.shouldShowInvalidCategory && !$scope.shouldShowInvalidTitle && !$scope.shouldShowInvalidContent);
+			return false;
+		}
+
+		return true;
 	}
 
 	httpFactory.getRequest("/posts", function(data) {
@@ -33,18 +39,23 @@ app.controller("PostsCtrl", function($scope, $location, postsProperties, httpFac
 		httpFactory.deleteRequest("/posts/" + $scope.selectedPost.id);
 	}
 
-	$scope.categories = 
-	[
-		{ id: 1, name: "Animal" },
-		{ id: 2, name: "Car" }
-	];
+	httpFactory.getRequest("/categories", function(data) {
+		$scope.categories = data.data;
+	});
 
-	$scope.createPost = function() {
-		if($scope.validatePost()) {
-			
-		}
+	$scope.createPost = function(event) {
+		$scope.currentMessage = "";
 		
-		return false;
+		if ($scope.validatePost()) {
+			var client = $rootScope.getCurrentUser();
+			$scope.selectedPost.clientId = client.id;
+			httpFactory.postRequest("/posts/insert", $scope.selectedPost, function(data) {
+				$scope.currentMessage = "Post added successfully";
+				$scope.selectedPost = undefined;
+			});
+		}
+	
+		event.preventDefault();
 	}
 
 	// $scope.posts = [

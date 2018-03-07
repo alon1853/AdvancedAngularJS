@@ -1,49 +1,83 @@
-app.controller("ClientsCtrl", function($scope, $rootScope, clientsProperties) {
-	$scope.selectedClient = clientsProperties.getCategory();
-	$scope.genders = ["Male", "Female"]
-	$scope.clients =
-	[
-		{ id: 1, gender: "Male", clientName: "345", firstName: "Roni", lastName: "Milner", password: "1234", isAdmin: true },
-		{ id: 2, gender: "Female", clientName: "3456", firstName: "Roni2", lastName: "Milner2", password: "12342", isAdmin: false },
-	];
+app.controller("ClientsCtrl", function($scope, $rootScope, $window, $cookies, clientsProperties, httpFactory) {
+	$scope.selectedClient = clientsProperties.getClient();
 
-	$scope.saveEditedClient = function() {
+	httpFactory.getRequest("/clients", function(data) {
+		$scope.clients = data.data;
+	});
+
+	$scope.genders = ["Male", "Female"];
+	
+	$scope.validateClient = function() {
 		$scope.shouldShowInvalidGender = false;
 		$scope.shouldShowInvalidFirstname = false;
 		$scope.shouldShowInvalidLastname = false;
 		$scope.shouldShowInvalidClientname = false;
 		$scope.shouldShowInvalidPassword = false;
-		
-		if ($scope.selectedClient.gender === undefined)
-			$scope.shouldShowInvalidGender = true;
-		
-		if ($scope.selectedClient.firstName === undefined)
-			$scope.shouldShowInvalidFirstname = true;
-		
-		if ($scope.selectedClient.lastName === undefined)
-			$scope.shouldShowInvalidLastname = true;
-		
-		if ($scope.selectedClient.clientName === undefined)
-			$scope.shouldShowInvalidClientname = true;
-		
-		if ($scope.selectedClient.password === undefined)
-			$scope.shouldShowInvalidPassword = true;
-		
-		if (!$scope.shouldShowInvalidFirstname &&
-			!$scope.shouldShowInvalidLastname &&
-			!$scope.shouldShowInvalidClientname &&
-			!$scope.shouldShowInvalidPassword) {
 
+		if ($scope.selectedClient.gender === undefined || $scope.selectedClient.gender == "") {
+			$scope.shouldShowInvalidGender = true;
+			return false;
+		}
+
+		if ($scope.selectedClient.firstName === undefined || $scope.selectedClient.firstName == "") {
+			$scope.shouldShowInvalidFirstname = true;
+			return false;
 		}
 		
-		return false;
+		if ($scope.selectedClient.lastName === undefined || $scope.selectedClient.lastName == "") {
+			$scope.shouldShowInvalidLastname = true;
+			return false;
+		}
+		
+		if ($scope.selectedClient.clientName === undefined || $scope.selectedClient.clientName == "") {
+			$scope.shouldShowInvalidClientname = true;
+			return false;
+		}
+		
+		if ($scope.selectedClient.password === undefined || $scope.selectedClient.password == "") {
+			$scope.shouldShowInvalidPassword = true;
+			return false;
+		}
+
+		return true;
+	}
+
+	$scope.saveEditedClient = function(event) {
+		$scope.currentMessage = "";
+
+		if($scope.validateClient()) {
+			httpFactory.putRequest("/clients/edit/"+$scope.selectedClient._id, $scope.selectedClient, function(data) {
+				$scope.currentMessage = "Client edited successfully";
+			});
+		}
+
+		event.preventDefault();
+	}
+
+	$scope.createClient = function(event) {
+		$scope.currentMessage = "";
+		
+		if ($scope.validateClient()) {
+			httpFactory.postRequest("/clients/insert", $scope.selectedClient, function(data) {
+				$scope.currentMessage = "Client added successfully";
+				$cookies.putObject("currentUser", data.data);
+				$scope.selectedClient = undefined;
+			});
+		}
+	
+		event.preventDefault();
 	}
 
 	$scope.deleteSelectedClient = function() {
-		
+		httpFactory.deleteRequest("/clients/delete/"+$scope.selectedClient._id);
+		$window.location.href = "/#!Clients";
+	}
+
+	$scope.searchClient = function() {
+
 	}
 	
 	$scope.setSelectedClient = function(client) {
-		clientsProperties.setCategory(client);
+		clientsProperties.setClient(client);
 	}
 });
