@@ -1,39 +1,52 @@
-app.controller("CategoriesCtrl", function($scope, $rootScope, categoriesProperties) {
+app.controller("CategoriesCtrl", function($scope, $rootScope, $window, categoriesProperties, httpFactory) {
 	$scope.selectedCategory = categoriesProperties.getCategory();
 
-	$scope.categories = 
-	[
-		{ id: 1, name: "Animal" },
-		{ id: 2, name: "Car" }
-	];
+	httpFactory.getRequest("/categories", function(data) {
+		$scope.categories = data.data;
+	})
 
 	$scope.validateCategory = function() {
-		$scope.ShouldShowInvalidCategory = false;
-
-		if ($scope.selectedCategory == undefined || $scope.selectedCategory.name == undefined)
+		if ($scope.selectedCategory.name == undefined || $scope.selectedCategory.name == "") {
 			$scope.shouldShowInvalidCategory = true;
-		
-		return (!$scope.shouldShowInvalidCategory);
-	}
 
-	$scope.createCategory = function() {
-		if($scope.validateCategory()) {
-			
-		}
-		
-		return false;
-	}
-
-	$scope.saveEditedCategory = function() {
-		if($scope.validateCategory()) {
+			return false;
 		}
 
+		$scope.shouldShowInvalidCategory = false;
+		return true;
+	}
+
+	$scope.createCategory = function(event) {
+		$scope.currentMessage = "";
+
+		if ($scope.validateCategory()) {
+			httpFactory.postRequest("/categories/insert", $scope.selectedCategory, function(data) {
+				$scope.currentMessage = "Category added successfully";
+				$scope.selectedCategory.name = undefined;
+			});
+		}
 		
-		return false;
+		event.preventDefault();
+	}
+
+	$scope.saveEditedCategory = function(event) {
+		$scope.currentMessage = "";
+
+		if($scope.validateCategory()) {
+			httpFactory.putRequest("/categories/edit/"+$scope.selectedCategory._id, $scope.selectedCategory, function(data) {
+				$scope.currentMessage = "Category edited successfully";
+				console.log("Inside callback");
+				// $scope.selectedCategory.name = undefined;
+			});
+		}
+
+		
+		event.preventDefault();
 	}
 
 	$scope.deleteSelectedCategory = function() {
-
+		httpFactory.deleteRequest("/categories/delete/"+$scope.selectedCategory._id);
+		$window.location.href = "/#!Categories";
 	}
 
 	$scope.setSelectedCategory = function(category) {

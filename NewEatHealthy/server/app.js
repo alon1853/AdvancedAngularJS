@@ -21,7 +21,7 @@ io.sockets.on('connection', function(client) {
    }, 1000, client);
 });
 
-app.use(express.static('app/src'))
+app.use(express.static('../app/src'))
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
@@ -66,12 +66,10 @@ app.get("/clients", api.clients);
 app.post('/categories/insert', api.addCategory)
 
 // UPDATE Category
-app.put('/categories/put/:id', function (req, res) {
-})
+app.put('/categories/edit/:id', api.editCategory)
 
 // DELETE Category
-app.delete('/categories/delete/:id', function (req, res) {
-})
+app.delete('/categories/delete/:id', api.deleteCategory)
 
 // SEARCH Category
 app.get("/categories/:id", function(req, res) {

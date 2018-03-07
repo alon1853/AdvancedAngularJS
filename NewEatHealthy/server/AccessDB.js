@@ -32,7 +32,7 @@ module.exports = {
   // get all the categories
   getCategories: function(callback) {
     console.log('*** accessDB.getCategories');
-    Customer.find({} , function(err, categories) {
+    Category.find({} , function(err, categories) {
       callback(null, categories);
     });
   },
@@ -94,41 +94,30 @@ module.exports = {
     });
   },
 
-//   editCustomer: function(id, req_body, state, callback) {
-//     console.log('*** accessDB.editCustomer');
+  editCategory: function(id, req_body, callback) {
+    console.log('*** accessDB.editCategory');
 
-//     var s = {'id': state[0].id, 'abbreviation': state[0].abbreviation, 'name': state[0].name}
+    Category.findOne({'_id': id}, {'_id': 1, 'name': 1}, function(err, category) {
+      if (err) { return callback(err); }
 
-//     Customer.findOne({'id': id}, {'_id': 1, 'firstName':1, 'lastName':1, 'city': 1, 'state': 1, 'stateId': 1, 'gender': 1, 'id': 1}, function(err, customer) {
-//       if (err) { return callback(err); }
+      category.name = req_body.name
 
-//       customer.firstName = req_body.firstName || customer.firstName;
-//       customer.lastName = req_body.lastName || customer.lastName;
-//       customer.email = req_body.email || customer.email;
-//       customer.address = req_body.address || customer.address;
-//       customer.city = req_body.city || customer.city;
-//       customer.state = s;
-//       customer.stateId = s.id;
-//       customer.zip = req_body.zip || customer.zip;
-//       customer.gender = req_body.gender || customer.gender;
+      category.save(function(err) {
+        if (err) { console.log('*** accessDB.editCategory err: ' + err); return callback(err); }
 
+        callback(null);
+      });
 
-//       customer.save(function(err) {
-//         if (err) { console.log('*** accessDB.editCustomer err: ' + err); return callback(err); }
+    });
+  },
 
-//         callback(null);
-//       });
-
-//     });
-//   },
-
-//   // delete a customer
-//   deleteCustomer: function(id, callback) {
-//     console.log('*** accessDB.deleteCustomer');
-//     Customer.remove({'id': id}, function(err, customer) {
-//       callback(null);
-//     });
-//   },
+  // delete a category
+  deleteCategory: function(id, callback) {
+    console.log('*** accessDB.deleteCategory');
+    Category.remove({'_id': id}, function(err, category) {
+      callback(null);
+    });
+  },
 
 //   // get a  customer's email
 //   getCustomerEmail: function(email, callback) {

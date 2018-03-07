@@ -1,18 +1,19 @@
 <h2>Edit</h2>
 
-<form action="editCategory" ng-submit="saveEditedCategory()">
+<form action="" ng-submit="saveEditedCategory($event)">
     <div class="form-horizontal">
         <h4>Category</h4>
         <hr />
         <div class="form-group">
             <label class="control-label col-md-2">Category Name</label>
-            <input required type="text" class="form-control" ng-model="selectedCategory.name">
+            <input type="text" class="form-control" ng-model="selectedCategory.name">
+            <span style="color: green">{{ currentMessage }}</span>
             <span ng-show="shouldShowInvalidCategory" class="text-danger field-validation-error">The Category field is required.</span>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" ng-click="saveEditedCategory()" />
+                <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </div>
     </div>

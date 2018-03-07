@@ -55,48 +55,41 @@ exports.markers = function (req, res) {
 
 exports.addCategory = function (req, res) {
   console.log('*** addCategory');
-  db.insertCategory(req.body, function(err){
-        if (err) {
-          console.log('*** addCategory err');
-          res.json(false);
-        } else {
-          console.log('*** addCategory ok');
-          //res.json(req.body);
-};
+  db.insertCategory(req.body, function (err) {
+    if (err) {
+      console.log('*** addCategory err');
+      res.json(false);
+    } else {
+      console.log('*** addCategory ok');
+      res.json(req.body);
+    };
   });
 }
 
- exports.editCustomer = function (req, res) {
-  console.log('*** editCustomer');
+ exports.editCategory = function (req, res) {
+  console.log('*** editCategory');
 
-  db.getState(req.body.stateId, function(err, state) {
+   db.editCategory(req.params.id, req.body, function (err) {
+     if (err) {
+       console.log('*** editCategory err' + util.inspect(err));
+       res.json({ 'status': false });
+     } else {
+       console.log('*** editCategory ok');
+
+       res.json({ 'status': true });
+     }
+   });
+ };
+
+exports.deleteCategory = function (req, res) {
+  console.log('*** deleteCategory');
+
+  db.deleteCategory(req.params.id, function(err) {
     if (err) {
-      console.log('*** getState err');
+      console.log('*** deleteCategory err');
       res.json({'status': false});
     } else {
-      db.editCustomer(req.params.id, req.body, state, function(err) {
-        if (err) {
-          console.log('*** editCustomer err' + util.inspect(err));
-          res.json({'status': false});
-        } else {
-          console.log('*** editCustomer ok');
-
-          res.json({'status': true});
-        }
-      });
-    }
-  });
-};
-
-exports.deleteCustomer = function (req, res) {
-  console.log('*** deleteCustomer');
-
-  db.deleteCustomer(req.params.id, function(err) {
-    if (err) {
-      console.log('*** deleteCustomer err');
-      res.json({'status': false});
-    } else {
-      console.log('*** deleteCustomer ok');
+      console.log('*** deleteCategory ok');
       res.json({'status': true});
     }
   });
