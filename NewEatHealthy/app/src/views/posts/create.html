@@ -7,7 +7,7 @@
 
 		<div class="form-group">
 			<label class="control-label col-md-2">CategoryID</label>
-			<select class = "form-control" ng-model="selectedPost.category.name" ng-options="x.name for x in categories track by x.name">
+			<select class = "form-control" ng-model="selectedPost.category.name" ng-options="x.name for x in categories">
 			</select>
 			<span ng-show="shouldShowInvalidCategory" class="text-danger field-validation-error">The Category ID field is required.</span>
 		</div>

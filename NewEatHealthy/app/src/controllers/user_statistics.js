@@ -1,4 +1,4 @@
-app.controller("UserStatisticsCtrl", function($scope, $rootScope) {	
+app.controller("UserStatisticsCtrl", function($scope, $rootScope, httpFactory) {	
     $scope.generateUserStatistics = function() {
         var svg = d3.select("svg"),
             margin = {top: 20, right: 10, bottom: 30, left: 80},
@@ -40,4 +40,8 @@ app.controller("UserStatisticsCtrl", function($scope, $rootScope) {
         });
     };
     $scope.generateUserStatistics();
+
+    httpFactory.getRequest("/posts", function(data) {
+        $scope.posts = data.data;
+    })
 });
