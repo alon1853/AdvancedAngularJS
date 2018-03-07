@@ -16,15 +16,14 @@ var mongoose = require('mongoose')
         type : String , required: true
     },
     isAdmin : {
-        type :  Boolean, default: false
+        type :  Boolean, required: true
     },
-    posts : [{
-         type: Schema.Types.ObjectId, ref: 'Post' 
-    }],
-    // need to ADD LIST OF POSTS ,LIST OF COMMENTS
-    comments : [{
-         type: Schema.Types.ObjectId, ref: 'Comment' 
-    }]
+    // posts : [{
+    //      type: Schema.Types.ObjectId, ref: 'Post' 
+    // }],
+    // comments : [{
+    //      type: Schema.Types.ObjectId, ref: 'Comment' 
+    // }]
   });
 
 exports.ClientSchema = ClientSchema;

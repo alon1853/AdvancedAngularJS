@@ -37,7 +37,6 @@ app.controller("PostsCtrl", function($scope, $location, $rootScope, postsPropert
 			});
 		}
 
-		
 		event.preventDefault();
 	}
 

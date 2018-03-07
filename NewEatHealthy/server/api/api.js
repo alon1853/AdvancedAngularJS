@@ -170,6 +170,7 @@ exports.posts = function (req, res) {
 
 exports.addPost = function (req, res) {
   console.log('*** addPost');
+  console.log(req.body)
   db.insertPost(req.body, function (err) {
     if (err) {
       console.log('*** addPost err');

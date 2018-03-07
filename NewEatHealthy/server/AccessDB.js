@@ -30,12 +30,12 @@ module.exports = {
   },
 
     // get all the posts
-    getPosts: function(callback) {
-      console.log('*** accessDB.getPosts');
-      Post.find({} , function(err, posts) {
-        callback(null, posts);
-      });
-    },
+    // getPosts: function(callback) {
+    //   console.log('*** accessDB.getPosts');
+    //   Post.find({} , function(err, posts) {
+    //     callback(null, posts);
+    //   });
+    // },
 
     
   // get all the categories
@@ -54,11 +54,21 @@ module.exports = {
         });
       },
 
+
+    // get all the markers
+    // getPosts: function(callback) {
+    //   console.log('*** accessDB.getPosts');
+    //   Post.find({} , function(err, posts) {
+    //     console.log(posts);
+    //     callback(null, posts);
+    //   });
+    // },
+  
     // get all the categories
     // getClients: function(callback) {
     //     console.log('*** accessDB.getClients');
     //     Client.find({} ,{gender:1,firstName: 1 ,lastName: 1,
-    //         clientName: 1 ,password: 1 ,isAdmin: 1, posts: 0, comments: 0} , function(err, clients) {
+    //         userName: 1 ,password: 1 ,isAdmin: 1, posts: 0, comments: 0} , function(err, clients) {
     //       callback(null, clients);
     //     });
     //   },
@@ -106,26 +116,26 @@ insertClient: function (req_body, callback) {
   });
 },
 
-insertPost: function (req_body, callback) {
-  console.log('*** accessDB.insertPost');
-  post = new Post();
-  post.title = req_body.title
-  post.content = req_body.content
-  post.creationDate = req_body.creationDate
+// insertPost: function (req_body, callback) {
+//   console.log('*** accessDB.insertPost');
+//   post = new Post();
+//   post.title = req_body.title
+//   post.content = req_body.content
+//   post.creationDate = req_body.creationDate
 
-  Category.findOne({'name': post.category}, {'_id': 1, 'name': 1}, function(err, category) {
-    post.category = category;
-    if (err) { return callback(err); }
-    });
+//   Category.findOne({'name': post.category}, {'_id': 1, 'name': 1}, function(err, category) {
+//     post.category = category;
+//     if (err) { return callback(err); }
+//     });
 
-  post._id = new ObjectID(); // The id is calculated by the Mongoose pre 'save'.
+//   post._id = new ObjectID(); // The id is calculated by the Mongoose pre 'save'.
 
-  post.save(function (err, post) {
-    if (err) { console.log('*** new post save err: ' + err); return callback(err); }
+//   post.save(function (err, post) {
+//     if (err) { console.log('*** new post save err: ' + err); return callback(err); }
 
-    callback(null, post._id);
-  });
-},
+//     callback(null, post._id);
+//   });
+// },
 
   insertMarker: function (req_body, callback) {
     console.log('*** accessDB.insertMarker');
@@ -211,15 +221,17 @@ insertPost: function (req_body, callback) {
 
   insertPost: function (req_body, callback) {
     console.log('*** accessDB.insertPost');
+    console.log(req_body)
     post = new Post();
     post.title = req_body.title
     post.content = req_body.content
     post.creationDate = req_body.creationDate
-    post.category = req_body.category
-    post.client = req_body.client
+    post.category = ObjectID(req_body.category._id)
+    post.client = ObjectID(req_body.clientId)
     post.comments = req_body.comments
     post._id = new ObjectID(); // The id is calculated by the Mongoose pre 'save'.
-
+    console.log("####after")
+    console.log(post);
     post.save(function (err, post) {
       if (err) { console.log('*** new post save err: ' + err); return callback(err); }
 
@@ -255,6 +267,31 @@ insertPost: function (req_body, callback) {
       callback(null);
     });
   },
+
+  getPosts: function(callback) {
+    console.log('*** accessDB.getPosts');
+    Post.find().populate("client").populate("category").exec(function(err, posts) {
+      console.log(posts);
+      callback(null, posts);
+    });
+  }
+
+  // { "_id" : ObjectId("5aa036d43e8521fa1a8127b1"), "client_" : ObjectId("5a9b1e5d009411de018d0c2f"),
+  //  "post_" : ObjectId("5a9b25a0009411de018d0c30"), 
+  // "content" : "מה אני עושה פה בכלל", "creationDate" : ISODate("2017-10-25T18:30:00Z") }
+  // Comment.aggregate([
+  //     {$group: {_id: '$post_', comments: {$push: {_id:_id,client_:client,content:content } }}}
+  //     // ...
+  //     ], function(err, result) {
+  //         if (err)
+  //            // error handling
+  //         Post.populate(result, {path: "_id"}, function(err, ret) {
+  //             if(err)
+  //                 console.log(err);
+  //             else
+  //                 console.log(ret);
+  //         });
+  //});
 
 //   // get a  customer's email
 //   getCustomerEmail: function(email, callback) {

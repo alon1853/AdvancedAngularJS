@@ -31,7 +31,6 @@ app.get("/posts", api.posts);
 // iNSERT Post
 app.post('/posts/insert', api.addPost)
 
-
 // UPDATE Post
 app.put('/posts/edit/:id', api.editPost)
 
@@ -77,13 +76,15 @@ app.get("/categories/:id", function(req, res) {
 app.get("/categories", api.categories);
 
 // iNSERT MARKER
-app.post('/markers/insert', api.addMarker)
+//app.post('/markers/insert', api.addMarker)
 
 // UPDATE MARKER
 app.put('/markers/edit/:id', api.editMarker)
 
 // DELETE MARKER
 app.delete('/markers/delete/:id', api.deleteMarker)
+
+//app.post('/comments/insert', api.addComment)
 
 // LIST MARKER
 app.get("/markers", api.markers);

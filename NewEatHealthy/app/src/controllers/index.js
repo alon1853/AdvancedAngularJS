@@ -8,7 +8,7 @@ app.controller("TimeCtrl", function($scope, $rootScope) {
 
 app.controller("IndexCtrl", function($scope, $rootScope, $cookies) {
 	
-	$cookies.putObject("currentUser", { id: 3, firstName: "Roni", lastName: "Milner", isAdmin: true });
+	$cookies.putObject("currentUser", { id: "5aa035fab36547ce2b497b6d", firstName: "Roni", lastName: "Milner", isAdmin: true });
 	//$cookies.remove("currentUser");
 
 	$rootScope.getCurrentUser = function() {

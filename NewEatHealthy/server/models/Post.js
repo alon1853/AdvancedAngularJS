@@ -18,8 +18,8 @@ var mongoose = require('mongoose')
     client : {
         type: Schema.Types.ObjectId, ref: 'Client' 
     },
-    comments : [{
-        type: Schema.Types.ObjectId, ref: 'Comment' 
+     comments : [{
+         type: Schema.Types.ObjectId, ref: 'Comment' 
     }]
   });
 
