@@ -25,6 +25,8 @@ app.use(express.static('../app/src'))
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
+
+app.get('/searchClients/:userName/:firstName/:lastName', api.searchClients)
 // LIST Post
 app.get("/posts", api.posts);
 

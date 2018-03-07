@@ -1,11 +1,10 @@
-<form action="" ng-submit="searchClient()">
+<form action="" ng-submit="searchClient($event)">
     <div class="row">
         <div class="form-group">
             <div class="col-md-2">
-                    User Name:
             </div>
             <div class="col-md-10">
-                <input type="text" name="userName" ng-model="selectedClient.userName"/>
+                <input type="text" name="userName" ng-model="searchByUname"/>
             </div>
         </div>
     </div>
@@ -15,7 +14,7 @@
                 First Name:
             </div>
             <div class="col-md-10">
-                <input type="text" name="firstname" ng-model="searchParams.firstName"/>
+                <input type="text" name="firstname" ng-model="searchByFname"/>
             </div>
         </div>
     </div>
@@ -25,7 +24,7 @@
                 Last Name:
             </div>
             <div class="col-md-10">
-                <input type="text" name="lastname" ng-model="searchParams.lastname"/>
+                <input type="text" name="lastname" ng-model="searchByLname"/>
             </div>
         </div>
     </div>
@@ -47,7 +46,7 @@
             Gender
         </th>
         <th>
-            UserName
+            userName
         </th>
         <th>
             FirstName

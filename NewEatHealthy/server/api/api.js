@@ -93,6 +93,18 @@ exports.deleteClient = function (req, res) {
   });
 }
 
+exports.searchClients = function (req, res) {
+  console.log('*** searchClients');
+  db.searchClients(req.params, function (err, docs) {
+    if (err) {
+      console.log('*** searchClients err');
+      res.json(false);
+    } else {
+      console.log('*** searchClients ok');
+      res.json(docs);
+    };
+  });
+}
 
 exports.addMarker = function (req, res) {
   console.log('*** addMarker');

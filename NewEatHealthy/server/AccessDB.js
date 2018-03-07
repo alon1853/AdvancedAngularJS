@@ -186,6 +186,55 @@ insertPost: function (req_body, callback) {
     });
   },
 
+  insertComment: function (req_body, callback) {
+    console.log('*** accessDB.insertComment');
+    comment = new Comment();
+    comment.content = req_body.content
+    comment.post = ObjectID(req_body.post._id)
+    comment.client = ObjectID(req_body.client._id)
+    comment._id = new ObjectID(); // The id is calculated by the Mongoose pre 'save'.
+
+    comment.save(function (err, comment) {
+      if (err) { console.log('*** new marker save err: ' + err); return callback(err); }
+
+      callback(null, comment._id);
+    });
+  },
+
+  searchClients: function (req_params, callback) {
+      console.log("parmas" + req_params)
+      var atleastOne = false;
+      
+      var curResult = Client.find();
+      if (req_params.firstName != undefined && req_params.firstName != "" && req_params.firstName != "undefined")
+      {
+        var regFname = new RegExp(req_params.firstName, 'i');
+        curResult = curResult.and({ 'firstName': { $regex: regFname }})
+      }
+
+      if (req_params.lastName != undefined && req_params.lastName != "" && req_params.lastName != "undefined")
+      {
+        var regLname = new RegExp(req_params.lastName, 'i');
+        curResult = curResult.and({ 'lastName': { $regex: regLname }})
+      }
+
+      if (req_params.userName != undefined && req_params.userName != "" && req_params.userName != "undefined")
+      {
+        var regUser = new RegExp(req_params.userName, 'i');
+        curResult = curResult.and({ 'userName': { $regex: regUser }})
+      }
+
+      curResult.exec(function(err, docs) {
+      if(err) 
+      {
+        console.log(err);
+        return callback (err, null)
+      }
+      console.log(docs);
+      return callback(null, docs);
+    });
+  },
+
   editMarker: function(id, req_body, callback) {
     console.log('*** accessDB.editMarker');
 

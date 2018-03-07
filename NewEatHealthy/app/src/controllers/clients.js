@@ -1,6 +1,8 @@
 app.controller("ClientsCtrl", function($scope, $rootScope, $window, $cookies, clientsProperties, httpFactory) {
 	$scope.selectedClient = clientsProperties.getClient();
-	$scope.searchParams = {}
+	$scope.searchByUname = undefined;
+	$scope.searchByFname = undefined;
+	$scope.searchByLname = undefined;
 
 	httpFactory.getRequest("/clients", function(data) {
 		$scope.clients = data.data;
@@ -12,7 +14,7 @@ app.controller("ClientsCtrl", function($scope, $rootScope, $window, $cookies, cl
 		$scope.shouldShowInvalidGender = false;
 		$scope.shouldShowInvalidFirstname = false;
 		$scope.shouldShowInvalidLastname = false;
-		$scope.shouldShowInvalidClientname = false;
+		$scope.shouldShowInvaliduserName = false;
 		$scope.shouldShowInvalidPassword = false;
 
 		if ($scope.selectedClient.gender === undefined || $scope.selectedClient.gender == "") {
@@ -31,7 +33,7 @@ app.controller("ClientsCtrl", function($scope, $rootScope, $window, $cookies, cl
 		}
 		
 		if ($scope.selectedClient.userName === undefined || $scope.selectedClient.userName == "") {
-			$scope.shouldShowInvalidClientname = true;
+			$scope.shouldShowInvaliduserName = true;
 			return false;
 		}
 		
@@ -74,10 +76,19 @@ app.controller("ClientsCtrl", function($scope, $rootScope, $window, $cookies, cl
 		$window.location.href = "/#!Clients";
 	}
 
-	$scope.searchClient = function() {
-		httpFactory.getRequest("/clients/"+$scope.searchParams.clientName+"/"+$scope.searchParams.firstName+"/"+$scope.searchParams.lastName, function(data) {
+
+	$scope.searchClient = function(event) {
+		if($scope.searchByUname == "")
+		$scope.searchByUname = undefined;
+		if($scope.searchByFname == "")
+		$scope.searchByFname = undefined;
+		if($scope.searchByLname == "")
+		$scope.searchByLname = undefined;
+
+		httpFactory.getRequest("/searchClients/"+$scope.searchByUname+"/"+$scope.searchByFname+"/"+$scope.searchByLname, function(data) {
 			$scope.clients = data.data;
-		});
+		   });
+		event.preventDefault();
 	}
 	
 	$scope.setSelectedClient = function(client) {
