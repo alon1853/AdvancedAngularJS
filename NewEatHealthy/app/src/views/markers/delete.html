@@ -25,7 +25,7 @@
             </dt>
     
             <dd>
-                {{ selectedMarker.latitude }}
+                {{ selectedMarker.lat }}
             </dd>
     
             <dt>
@@ -33,7 +33,7 @@
             </dt>
     
             <dd>
-                {{ selectedMarker.longitude }}
+                {{ selectedMarker.long }}
             </dd>
     
             <dt>
@@ -45,11 +45,9 @@
             </dd>
 
     </dl>
-
-    <form action="deleteMarkerForm" ng-submit="deleteSelectedMarker()">
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" ng-click="deleteSelectedMarker()"/> |
-            <a href="/#!Markers">Back to list</a>
-        </div>
-    </form>
+    
+    <div class="form-actions no-color">
+        <input type="submit" value="Delete" class="btn btn-default" ng-click="deleteSelectedMarker()" /> |
+        <a href="/#!Markers">Back to list</a>
+    </div>
 </div>

@@ -53,6 +53,48 @@ exports.markers = function (req, res) {
   });
 };
 
+exports.addMarker = function (req, res) {
+  console.log('*** addMarker');
+  db.insertMarker(req.body, function (err) {
+    if (err) {
+      console.log('*** addMarker err');
+      res.json(false);
+    } else {
+      console.log('*** addMarker ok');
+      res.json(req.body);
+    };
+  });
+}
+
+exports.editMarker = function (req, res) {
+  console.log('*** editMarker');
+
+   db.editMarker(req.params.id, req.body, function (err) {
+     if (err) {
+       console.log('*** editMarker err' + util.inspect(err));
+       res.json({ 'status': false });
+     } else {
+       console.log('*** editMarker ok');
+
+       res.json({ 'status': true });
+     }
+   });
+ };
+
+ exports.deleteMarker = function (req, res) {
+  console.log('*** deleteMarker');
+
+  db.deleteMarker(req.params.id, function(err) {
+    if (err) {
+      console.log('*** deleteMarker err');
+      res.json({'status': false});
+    } else {
+      console.log('*** deleteMarker ok');
+      res.json({'status': true});
+    }
+  });
+};
+
 exports.addCategory = function (req, res) {
   console.log('*** addCategory');
   db.insertCategory(req.body, function (err) {

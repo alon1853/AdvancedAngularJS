@@ -3,7 +3,7 @@ app.controller("CategoriesCtrl", function($scope, $rootScope, $window, categorie
 
 	httpFactory.getRequest("/categories", function(data) {
 		$scope.categories = data.data;
-	})
+	});
 
 	$scope.validateCategory = function() {
 		if ($scope.selectedCategory.name == undefined || $scope.selectedCategory.name == "") {
@@ -35,8 +35,6 @@ app.controller("CategoriesCtrl", function($scope, $rootScope, $window, categorie
 		if($scope.validateCategory()) {
 			httpFactory.putRequest("/categories/edit/"+$scope.selectedCategory._id, $scope.selectedCategory, function(data) {
 				$scope.currentMessage = "Category edited successfully";
-				console.log("Inside callback");
-				// $scope.selectedCategory.name = undefined;
 			});
 		}
 

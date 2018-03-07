@@ -80,7 +80,51 @@ module.exports = {
 //     });
 //   },
 
-  // insert a  customer
+  insertMarker: function (req_body, callback) {
+    console.log('*** accessDB.insertMarker');
+    marker = new Marker();
+    marker.name = req_body.name
+    marker.address = req_body.address
+    marker.lat = req_body.lat
+    marker.long = req_body.long
+    marker.type = req_body.type
+    marker._id = new ObjectID(); // The id is calculated by the Mongoose pre 'save'.
+
+    marker.save(function (err, marker) {
+      if (err) { console.log('*** new marker save err: ' + err); return callback(err); }
+
+      callback(null, marker._id);
+    });
+  },
+
+  editMarker: function(id, req_body, callback) {
+    console.log('*** accessDB.editMarker');
+
+    Marker.findOne({'_id': id}, {'_id': 1, 'name': 1, 'address': 1, 'lat': 1, 'long': 1, 'type': 1}, function(err, marker) {
+      if (err) { return callback(err); }
+
+      marker.name = req_body.name
+      marker.address = req_body.address
+      marker.lat = req_body.lat
+      marker.long = req_body.long
+      marker.type = req_body.type
+
+      marker.save(function(err) {
+        if (err) { console.log('*** accessDB.editMarker err: ' + err); return callback(err); }
+
+        callback(null);
+      });
+
+    });
+  },
+
+  deleteMarker: function(id, callback) {
+    console.log('*** accessDB.deleteMarker');
+    Marker.remove({'_id': id}, function(err, marker) {
+      callback(null);
+    });
+  },
+
   insertCategory: function(req_body, callback) {
     console.log('*** accessDB.insertCategoty');
     category = new Category();
@@ -111,7 +155,6 @@ module.exports = {
     });
   },
 
-  // delete a category
   deleteCategory: function(id, callback) {
     console.log('*** accessDB.deleteCategory');
     Category.remove({'_id': id}, function(err, category) {

@@ -79,20 +79,13 @@ app.get("/categories/:id", function(req, res) {
 app.get("/categories", api.categories);
 
 // iNSERT MARKER
-app.post('/markers/insert', function (req, res) {
-})
+app.post('/markers/insert', api.addMarker)
 
 // UPDATE MARKER
-app.put('/markers/put/:id', function (req, res) {
-})
+app.put('/markers/edit/:id', api.editMarker)
 
 // DELETE MARKER
-app.delete('/markers/delete/:id', function (req, res) {
-})
-
-// SEARCH Markers
-app.get("/markers/:id", function(req, res) {
-})
+app.delete('/markers/delete/:id', api.deleteMarker)
 
 // LIST MARKER
 app.get("/markers", api.markers);

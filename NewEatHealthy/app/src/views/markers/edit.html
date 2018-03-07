@@ -1,12 +1,13 @@
 <h2>Edit</h2>
-<form name="editMarkerForm" ng-submit="saveEditedMarker()">
+<form action="" ng-submit="saveEditedMarker($event)">
     <div class="form-horizontal">
         <h4>Marker</h4>
         <hr />
+        <span style="color: green">{{ currentMessage }}</span>
         <div class="form-group">
             <label class="control-label col-md-2">Name</label>
             <div class="col-md-10">
-                <input required type="text" class="form-control" ng-model="selectedMarker.name" >
+                <input type="text" class="form-control" ng-model="selectedMarker.name" >
                 <span ng-show="shouldShowInvalidName" class="text-danger field-validation-error">The Name field is required.</span>
             </div>
         </div>
@@ -14,7 +15,7 @@
         <div class="form-group">
             <label class="control-label col-md-2">Address</label>
             <div class="col-md-10">
-                <input required type="text" class="form-control" ng-model="selectedMarker.address">
+                <input type="text" class="form-control" ng-model="selectedMarker.address">
                 <span ng-show="shouldShowInvalidAddress" class="text-danger field-validation-error">The Address field is required.</span>
             </div>
         </div>
@@ -22,7 +23,7 @@
         <div class="form-group">
             <label class="control-label col-md-2">Latitude</label>
             <div class="col-md-10">
-                <input required type="text" class="form-control" ng-model="selectedMarker.latitude">
+                <input type="text" class="form-control" ng-model="selectedMarker.lat">
                 <span ng-show="shouldShowInvalidLatitude" class="text-danger field-validation-error">The Latitude field is required.</span>
             </div>
         </div>
@@ -30,7 +31,7 @@
         <div class="form-group">
             <label class="control-label col-md-2">Longtitude</label>
             <div class="col-md-10">
-                <input required type="text" class="form-control" ng-model="selectedMarker.longitude">
+                <input type="text" class="form-control" ng-model="selectedMarker.long">
                 <span ng-show="shouldShowInvalidLongitude" class="text-danger field-validation-error">The Longitude field is required.</span>
             </div>
         </div>
@@ -38,14 +39,14 @@
         <div class="form-group">
             <label class="control-label col-md-2">Type</label>
             <div class="col-md-10">
-                <input required type="text" class="form-control" ng-model="selectedMarker.type">
+                <input type="text" class="form-control" ng-model="selectedMarker.type">
                 <span ng-show="shouldShowInvalidType" class="text-danger field-validation-error">The Type field is required.</span>
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" ng-click="saveEditedMarker()"/>
+                <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </div>
     </div>
