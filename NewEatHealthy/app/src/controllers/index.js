@@ -7,13 +7,9 @@ app.controller("TimeCtrl", function($scope, $rootScope) {
 });
 
 app.controller("IndexCtrl", function($scope, $rootScope, $cookies) {
-	
-	$cookies.putObject("currentUser", { id: "5aa035fab36547ce2b497b6d", firstName: "Roni", lastName: "Milner", isAdmin: true });
-	//$cookies.remove("currentUser");
 
 	$rootScope.getCurrentUser = function() {
 		var currentUser = $cookies.get("currentUser");
-		
 		if (currentUser != undefined) {
 			return JSON.parse(currentUser);
 		}
