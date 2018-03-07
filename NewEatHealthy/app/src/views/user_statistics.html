@@ -1,25 +1,6 @@
-<h2>Statistics of the Posts</h2>
-<p>The most popular reviewers by how much they write posts.</p>
+<link rel="stylesheet" href="styles/posts_statistics.css">
 
-<table class="table">
-    <tr>
-        <th>
-            The Post
-        </th>
-        <th>
-            Number Of Comments
-        </th>
-    </tr>
-
-    <tr ng-repeat="post in posts">
-        <td>
-            {{ post.title }}
-        </td>
-        <td>
-            {{ post.numberOfComments }}
-        </td>
-    </tr>
-
-</table>
-<link rel="stylesheet" href="styles/user_statistics.css">
-<svg width="960" height="450"></svg>
+<h3 style="width:800px; margin:0 auto;">UserPosts</h3>
+<svg id="userStatistics" width="1000" height="500"></svg>
+<h3 style="width:800px; margin:0 auto;">GenderPosts</h3>
+<svg id="genderStatistics" width="1000" height="500"></svg>

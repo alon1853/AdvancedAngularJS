@@ -1,91 +1,47 @@
-app.controller("PostsStatisticsCtrl", function($scope, $rootScope) {
-    $scope.generateUserPostsStatistics = function() {
-        var svg = d3.select("#userStatistics"),
-            width = +svg.attr("width"),
-            height = +svg.attr("height"),
-            radius = Math.min(width, height) / 3,
-            g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+app.controller("PostsStatisticsCtrl", function($scope, $rootScope, httpFactory) {	
+    $scope.generateUserStatistics = function() {
+        var svg = d3.select("svg"),
+            margin = {top: 20, right: 10, bottom: 30, left: 80},
+            width = +svg.attr("width") - margin.left - margin.right,
+            height = +svg.attr("height") - margin.top - margin.bottom;
 
-        var color = d3.scaleOrdinal(["#a05d56", "#d0743c", "#ff8c00", "#98abc5", "#8a89a6", "#7b6888", "#6b486b"]);
+        var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
+            y = d3.scaleLinear().rangeRound([height, 0]);
 
-        var pie = d3.pie()
-            .sort(null)
-            .value(function(d) { return d.posts; });
+        var g = svg.append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-        var path = d3.arc()
-            .outerRadius(radius - 10)
-            .innerRadius(0);
-
-        var label = d3.arc()
-            .outerRadius(radius - 70)
-            .innerRadius(radius - 100);
-
-        d3.csv("pie_user_posts.csv", function(d) {
-        d.posts = +d.posts;
+        d3.csv("statistics.csv", function(d) {
+        d.value = +d.value;
         return d;
         }, function(error, data) {
         if (error) throw error;
 
-        var arc = g.selectAll(".arc")
-            .data(pie(data))
-            .enter().append("g")
-            .attr("class", "arc");
+        x.domain(data.map(function(d) { return d.name; }));
+        y.domain([0, d3.max(data, function(d) { return d.value; })]);
 
-        arc.append("path")
-            .attr("d", path)
-            .attr("fill", function(d) { return color(d.data.index); });
-
-        arc.append("text")
-            .attr("transform", function(d) { return "translate(" + label.centroid(d) + ")"; })
-            .attr("dy", "0.35em")
-            .text(function(d) { return d.data.user + '-' + d.data.posts; });
+        g.append("g")
+            .attr("class", "axis axis--x")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x));
+        
+        g.append("g")
+            .attr("class", "axis axis--y")
+            .call(d3.axisLeft(y).ticks(15))
+        
+        g.selectAll(".bar")
+            .data(data)
+            .enter().append("rect")
+            .attr("class", "bar")
+            .attr("x", function(d) { return x(d.name); })
+            .attr("y", function(d) { return y(d.value); })
+            .attr("width", x.bandwidth())
+            .attr("height", function(d) { return height - y(d.value); });
         });
     };
+    $scope.generateUserStatistics();
 
-    $scope.generateGenderPostsStatistics = function() {
-        var svg = d3.select("#genderStatistics"),
-        width = +svg.attr("width"),
-        height = +svg.attr("height"),
-        radius = Math.min(width, height) / 3,
-        g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-
-        var color = d3.scaleOrdinal(["#a05d56", "#d0743c", "#ff8c00", "#98abc5", "#8a89a6", "#7b6888", "#6b486b"]);
-
-        var pie = d3.pie()
-            .sort(null)
-            .value(function(d) { return d.percent; });
-
-        var path = d3.arc()
-            .outerRadius(radius - 10)
-            .innerRadius(0);
-
-        var label = d3.arc()
-            .outerRadius(radius - 70)
-            .innerRadius(radius - 100);
-
-        d3.csv("pie_gender.csv", function(d) {
-        d.percent = +d.percent;
-        return d;
-        }, function(error, data) {
-        if (error) throw error;
-
-        var arc = g.selectAll(".arc")
-            .data(pie(data))
-            .enter().append("g")
-            .attr("class", "arc");
-
-        arc.append("path")
-            .attr("d", path)
-            .attr("fill", function(d) { return color(d.data.index); });
-
-        arc.append("text")
-            .attr("transform", function(d) { return "translate(" + label.centroid(d) + ")"; })
-            .attr("dy", "0.35em")
-            .text(function(d) { return d.data.gender + '\n' + d.data.percent + "%"; });
-        });
-    };
-
-    $scope.generateUserPostsStatistics();
-    $scope.generateGenderPostsStatistics();
-
+    httpFactory.getRequest("/posts", function(data) {
+        $scope.posts = data.data;
+    })
 });
