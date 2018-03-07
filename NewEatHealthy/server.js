@@ -19,13 +19,15 @@ io.sockets.on('connection', function(client) {
    }, 1000, client);
 });
 
+
 app.use(express.static('app/src'))
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
-app.post('/get_post_by_id', function (req, res) {
-    var postid = req.body.id;
-    console.log(postid);
+// POST BY ID
+app.get('/posts/:id', function (req, res) 
+{
+    console.log(req.body);
     MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("EatHealthy");
@@ -78,6 +80,7 @@ app.post('/get_post_by_id', function (req, res) {
     });
 })
 
+// LIST POST
 app.get('/posts', function (req, res) {
     // MongoClient.connect(url, function (err, db) {
     //     if (err) throw err;
@@ -168,6 +171,96 @@ app.get('/posts', function (req, res) {
     res.send(JSON.stringify(result));
 })
 
+// DELETE POST
+app.delete('/posts/:id', function (req, res) {
+    MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("EatHealthy");
+    dbo.collection("Posts").deleteOne({_id : req.params.id}, function(err, obj) {
+        if (err) throw err;
+        console.log("Post Document deleted");
+        db.close();
+      });
+});
+})
+
+// UPDATE POST 
+app.put('/posts/put/:id', function (req, res) {
+    MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        var dbo = db.db("EatHealthy");
+        var myquery = {_id:ObjectID(req.params.id)};
+        var newvalues = { $set: {Gender: req.body.gender, FirstName: req.body.firstName, LastName: req.body.lastName,
+             ClientName: req.body.clientName, Password: req.body.Password, IsAdmin:req.body.isAdmin } };
+        dbo.collection("Posts").updateOne(myquery, newvalues, function(err, res) {
+          if (err) throw err;
+          console.log("1 document updated");
+          db.close();
+        });
+      });
+})
+
+// iNSERT CLIENT
+app.post('/clients/insert', function (req, res) {
+    MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        var dbo = db.db("EatHealthy");
+        var object = { Gender: req.body.gender, FirstName: req.body.firstName, LastName: req.body.lastName,
+             ClientName: req.body.clientName, Password: req.body.Password, IsAdmin:req.body.isAdmin };
+        dbo.collection("Clients").insertOne(object, function(err, res) {
+          if (err) throw err;
+          console.log("1 document updated");
+          db.close();
+        });
+      });
+})
+
+// UPDATE CLIENT
+app.put('/clients/put/:id', function (req, res) {
+    MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        var dbo = db.db("EatHealthy");
+        var myquery = {_id:ObjectID(req.params.id)};
+        var newvalues = { $set: {Gender: req.body.gender, FirstName: req.body.firstName, LastName: req.body.lastName,
+             ClientName: req.body.clientName, Password: req.body.Password, IsAdmin:req.body.isAdmin } };
+        dbo.collection("Clients").updateOne(myquery, newvalues, function(err, res) {
+          if (err) throw err;
+          console.log("1 document updated");
+          db.close();
+        });
+      });
+})
+
+// DELETE CLIENT
+app.delete('/clients/delete/:id', function (req, res) {
+    MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("EatHealthy");
+    dbo.collection("Clients").deleteOne({_id : req.params.id}, function(err, obj) {
+        if (err) throw err;
+        console.log("Client Document deleted");
+        db.close();
+      });
+});
+})
+
+// SEARCH CLIENTS
+app.get("/clients/:id", function(req, res) {
+    //var body = req.body;
+    MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("EatHealthy");
+    var myquery = {_id:ObjectID(req.params.id)};
+    dbo.collection("Clients").findOne(myquery, function(err, result) {
+        if (err) throw err;
+        console.log(result);
+        res.json(result);
+        db.close();
+      });
+});
+})
+
+// LIST CLIENTS
 app.get("/clients", function(req, res) {
     //var body = req.body;
     MongoClient.connect(url, function(err, db) {
@@ -182,13 +275,147 @@ app.get("/clients", function(req, res) {
 });
 })
 
-app.delete('/posts/:id', function (req, res) {
+// iNSERT Category
+app.post('/categories/insert', function (req, res) {
+    MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        var dbo = db.db("EatHealthy");
+        var object = { Name: req.body.name };
+        dbo.collection("Categories").insertOne(object, function(err, res) {
+          if (err) throw err;
+          console.log("Category document added");
+          db.close();
+        });
+      });
+})
+
+// UPDATE Category
+app.put('/categories/put/:id', function (req, res) {
+    MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        var dbo = db.db("EatHealthy");
+        var myquery = {_id:ObjectID(req.params.id)};
+        var newvalues = { $set: {Name: req.body.name} };
+        dbo.collection("Categories").updateOne(myquery, newvalues, function(err, res) {
+          if (err) throw err;
+          console.log("Category document updated");
+          db.close();
+        });
+      });
+})
+
+// DELETE Category
+app.delete('/categories/delete/:id', function (req, res) {
     MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("EatHealthy");
-    dbo.collection("Posts").deleteOne({_id : req.params.id}, function(err, obj) {
+    dbo.collection("Categories").deleteOne({_id : req.params.id}, function(err, obj) {
         if (err) throw err;
-        console.log("Post Document deleted");
+        console.log("Category Document deleted");
+        db.close();
+      });
+});
+})
+
+// SEARCH Category
+app.get("/categories/:id", function(req, res) {
+    //var body = req.body;
+    MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("EatHealthy");
+    var myquery = {_id:ObjectID(req.params.id)};
+    dbo.collection("Categories").findOne(myquery, function(err, result) {
+        if (err) throw err;
+        console.log(result);
+        res.json(result);
+        db.close();
+      });
+});
+})
+
+// LIST Category
+app.get("/categories", function(req, res) {
+    //var body = req.body;
+    MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("EatHealthy");
+    dbo.collection("Categories").find({}).toArray(function(err, result) {
+        if (err) throw err;
+        console.log(result);
+        res.json(result);
+        db.close();
+      });
+});
+})
+
+// iNSERT MARKER
+app.post('/markers/insert', function (req, res) {
+    MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        var dbo = db.db("EatHealthy");
+        var object = {Name: req.body.name, Address: req.body.address, lat: req.body.lat,
+            long: req.body.long, type: req.body.type};
+        dbo.collection("Markers").insertOne(object, function(err, res) {
+          if (err) throw err;
+          console.log("1 document updated");
+          db.close();
+        });
+      });
+})
+
+// UPDATE MARKER
+app.put('/markers/put/:id', function (req, res) {
+    MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        var dbo = db.db("EatHealthy");
+        var myquery = {_id:ObjectID(req.params.id)};
+        var newvalues = { $set: {Name: req.body.name, Address: req.body.address, lat: req.body.lat,
+             long: req.body.long, type: req.body.type}};
+        dbo.collection("Markers").updateOne(myquery, newvalues, function(err, res) {
+          if (err) throw err;
+          console.log("1 document updated");
+          db.close();
+        });
+      });
+})
+
+// DELETE MARKER
+app.delete('/markers/delete/:id', function (req, res) {
+    MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("EatHealthy");
+    dbo.collection("Markers").deleteOne({_id : req.params.id}, function(err, obj) {
+        if (err) throw err;
+        console.log("Client Document deleted");
+        db.close();
+      });
+});
+})
+
+// SEARCH Markers
+app.get("/markers/:id", function(req, res) {
+    MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("EatHealthy");
+    var myquery = {_id:ObjectID(req.params.id)};
+    dbo.collection("Markers").findOne(myquery, function(err, result) {
+        if (err) throw err;
+        console.log(result);
+        res.json(result);
+        db.close();
+      });
+});
+})
+
+// LIST MARKER
+app.get("/markers", function(req, res) {
+    MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("EatHealthy");
+    dbo.collection("Markers").find({}).toArray(function(err, result) {
+        if (err) throw err;
+        console.log(result);
+        res.json(result);
         db.close();
       });
 });
