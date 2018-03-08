@@ -11,14 +11,14 @@ app.controller("PostsStatisticsCtrl", function($scope, $rootScope, httpFactory) 
         var g = svg.append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-        d3.csv("statistics.csv", function(d) {
-        d.value = +d.value;
+        d3.json($scope.posts, function(d) {
+        d.count = +d.count;
         return d;
         }, function(error, data) {
         if (error) throw error;
 
-        x.domain(data.map(function(d) { return d.name; }));
-        y.domain([0, d3.max(data, function(d) { return d.value; })]);
+        x.domain(data.map(function(d) { return d._id; }));
+        y.domain([0, d3.max(data, function(d) { return d.count; })]);
 
         g.append("g")
             .attr("class", "axis axis--x")
@@ -33,15 +33,16 @@ app.controller("PostsStatisticsCtrl", function($scope, $rootScope, httpFactory) 
             .data(data)
             .enter().append("rect")
             .attr("class", "bar")
-            .attr("x", function(d) { return x(d.name); })
-            .attr("y", function(d) { return y(d.value); })
+            .attr("x", function(d) { return x(d._id); })
+            .attr("y", function(d) { return y(d.count); })
             .attr("width", x.bandwidth())
-            .attr("height", function(d) { return height - y(d.value); });
+            .attr("height", function(d) { return height - y(d.count); });
         });
     };
     
-    httpFactory.getRequest("/posts", function(data) {
+    httpFactory.getRequest("/groupGender", function(data) {
         $scope.posts = data.data;
         $scope.generateUserStatistics();
     })
+
 });

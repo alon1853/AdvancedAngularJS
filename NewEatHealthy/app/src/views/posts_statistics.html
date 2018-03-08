@@ -1,22 +1,21 @@
-<h2>Statistics of the Posts</h2>
-<p>The most popular reviewers by how much they write posts.</p>
+<h2>Statistics of User / Gender</h2>
 
 <table class="table">
     <tr>
         <th>
-            The Post
+            The gender
         </th>
         <th>
-            Number Of Comments
+            count user to gender
         </th>
     </tr>
 
     <tr ng-repeat="post in posts">
         <td>
-            {{ post.title }}
+            {{ post._id }}
         </td>
         <td>
-            {{ post.numberOfComments }}
+            {{ post.count }}
         </td>
     </tr>
 
