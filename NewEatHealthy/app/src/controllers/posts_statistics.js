@@ -11,7 +11,7 @@ app.controller("PostsStatisticsCtrl", function($scope, $rootScope, httpFactory) 
         var g = svg.append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-        d3.json($scope.posts, function(d) {
+        d3.csv("statistics.csv", function(d) {
         d.value = +d.value;
         return d;
         }, function(error, data) {

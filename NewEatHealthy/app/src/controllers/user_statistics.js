@@ -20,7 +20,7 @@ app.controller("UserStatisticsCtrl", function($scope, $rootScope, httpFactory) {
             .outerRadius(radius - 70)
             .innerRadius(radius - 100);
 
-        d3.json($scope.clients, function(d) {
+        d3.csv("pie_user_posts.csv", function(d) {
         d.posts = +d.posts;
         return d;
         }, function(error, data) {
@@ -63,7 +63,7 @@ app.controller("UserStatisticsCtrl", function($scope, $rootScope, httpFactory) {
             .outerRadius(radius - 70)
             .innerRadius(radius - 100);
 
-        d3.json($scope.clients, function(d) {
+        d3.csv("pie_gender.csv", function(d) {
         d.percent = +d.percent;
         return d;
         }, function(error, data) {
