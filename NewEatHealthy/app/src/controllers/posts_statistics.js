@@ -11,8 +11,11 @@ app.controller("PostsStatisticsCtrl", function($scope, $rootScope, httpFactory) 
         var g = svg.append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-        d3.json($scope.posts, function(d) {
-        d.count = +d.count;
+        console.log($scope.posts)
+
+        d3.csv("statistics.csv", function(d) {
+            d.count = +d.count;
+            
         return d;
         }, function(error, data) {
         if (error) throw error;
@@ -42,6 +45,7 @@ app.controller("PostsStatisticsCtrl", function($scope, $rootScope, httpFactory) 
     
     httpFactory.getRequest("/groupGender", function(data) {
         $scope.posts = data.data;
+        console.log($scope.posts)
         $scope.generateUserStatistics();
     })
 
