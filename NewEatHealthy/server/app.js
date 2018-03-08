@@ -82,7 +82,7 @@ app.get("/categories/:id", function(req, res) {
 app.get("/categories", api.categories);
 
 // iNSERT MARKER
-//app.post('/markers/insert', api.addMarker)
+app.post('/markers/insert', api.addMarker)
 
 // UPDATE MARKER
 app.put('/markers/edit/:id', api.editMarker)

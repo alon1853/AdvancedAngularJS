@@ -147,14 +147,6 @@ deleteClient: function(id, callback) {
   });
 },
 
-insertPost: function (req_body, callback) {
-  console.log('*** accessDB.insertPost');
-  post = new Post();
-  post.title = req_body.title
-  post.content = req_body.content
-  post.creationDate = req_body.creationDate
-},
-
 //   Category.findOne({'name': post.category}, {'_id': 1, 'name': 1}, function(err, category) {
 //     post.category = category;
 //     if (err) { return callback(err); }
@@ -404,10 +396,9 @@ groupPost: function (id, callback) {
     post = new Post();
     post.title = req_body.title
     post.content = req_body.content
-    post.creationDate = req_body.creationDate
     post.category = ObjectID(req_body.category._id)
     post.client = ObjectID(req_body.clientId)
-    post.comments = req_body.comments
+    post.comments = []
     post._id = new ObjectID(); // The id is calculated by the Mongoose pre 'save'.
     post.save(function (err, post) {
       if (err) { console.log('*** new post save err: ' + err); return callback(err); }
