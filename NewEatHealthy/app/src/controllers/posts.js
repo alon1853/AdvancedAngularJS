@@ -1,5 +1,6 @@
 app.controller("PostsCtrl", function($scope, $location, $rootScope, postsProperties, httpFactory) {
 	$scope.selectedPost = postsProperties.getPost();
+	$scope.searchParams = {}
 	$scope.validatePost = function() {
 		$scope.shouldShowInvalidCategory = false;
 		$scope.shouldShowInvalidTitle = false;
@@ -91,5 +92,19 @@ app.controller("PostsCtrl", function($scope, $location, $rootScope, postsPropert
 	$scope.postComment = function(post) {
 		
 	};
+
+	$scope.searchPost = function(event) {
+		if($scope.searchParams.title == "")
+		$scope.searchParams.title = undefined;
+		if($scope.searchParams.content == "")
+		$scope.searchParams.content = undefined;
+		if($scope.searchParams.date == "")
+		$scope.searchParams.date = undefined;
+
+		httpFactory.getRequest("/searchPosts/"+$scope.searchParams.title+"/"+$scope.searchParams.content+"/"+$scope.searchParams.date, function(data) {
+			$scope.posts = data.data;
+		   });
+		event.preventDefault();
+		};
 
 });

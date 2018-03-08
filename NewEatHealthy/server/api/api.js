@@ -106,6 +106,21 @@ exports.searchClients = function (req, res) {
   });
 }
 
+exports.searchPosts = function (req, res) {
+  console.log('*** searchPosts');
+  db.searchPosts(req.params, function (err, docs) {
+    if (err) {
+      console.log('*** searchPosts err');
+      res.json(false);
+    } else {
+      console.log('*** searchPosts ok');
+      console.log(docs);
+      res.json(docs);
+    };
+  });
+}
+
+
 exports.addMarker = function (req, res) {
   console.log('*** addMarker');
   db.insertMarker(req.body, function (err) {
@@ -201,8 +216,6 @@ exports.posts = function (req, res) {
       });
     } else {
       console.log('*** posts ok');
-      console.log('*** posts are ' + posts);
-
       res.json(posts);
     }
   });
@@ -210,7 +223,6 @@ exports.posts = function (req, res) {
 
 exports.addPost = function (req, res) {
   console.log('*** addPost');
-  console.log(req.body)
   db.insertPost(req.body, function (err) {
     if (err) {
       console.log('*** addPost err');

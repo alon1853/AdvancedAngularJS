@@ -4,45 +4,47 @@
 	</button>
 </a>
 
-<div class="row" style="margin-bottom: 10px;">
-	<div class="form-group">
-		<div class="col-md-2">
-			Title:
-		</div>
-		<div class="col-md-10">
-			<input type="text" name="title" class="form-control" />
+<form action="" ng-submit="searchPost($event)">
+	<div class="row" style="margin-bottom: 10px;">
+		<div class="form-group">
+			<div class="col-md-2">
+				Title:
+			</div>
+			<div class="col-md-10">
+				<input type="text" name="title" ng-model="searchParams.title" />
+			</div>
 		</div>
 	</div>
-</div>
 
-<div class="row" style="margin-bottom: 10px;">
-	<div class="form-group">
-		<div class="col-md-2">
-			Content:
-		</div>
-		<div class="col-md-10">
-			<input type="text" name="content" class="form-control" />
+	<div class="row" style="margin-bottom: 10px;">
+		<div class="form-group">
+			<div class="col-md-2">
+				Content:
+			</div>
+			<div class="col-md-10">
+				<input type="text" name="content" ng-model="searchParams.content"/>
+			</div>
 		</div>
 	</div>
-</div>
 
-<div class="row" style="margin-bottom: 10px;">
-	<div class="form-group">
-		<div class="col-md-2">
-			Creation Date:
-		</div>
-		<div class="col-md-10">
-			<input type="date" name="date" class="form-control" />
-		</div>
-	</div>
-</div>
-<div class="row">
-	<div class="form-group">
-		<div class="col-md-offset-2 col-md-10">
-			<input type="submit" value="Search" class="btn btn-default" />
+	<div class="row" style="margin-bottom: 10px;">
+		<div class="form-group">
+			<div class="col-md-2">
+				Creation Date:
+			</div>
+			<div class="col-md-10">
+				<input type="date" name="date" ng-model="searchParams.date"/>
+			</div>
 		</div>
 	</div>
-</div>
+	<div class="row">
+		<div class="form-group">
+			<div class="col-md-offset-2 col-md-10">
+				<input type="submit" value="Search" class="btn btn-default" />
+			</div>
+		</div>
+	</div>
+</form>
 
 <div style="border-bottom: 2px #ccc dashed; margin-top: 20px;"></div>
 

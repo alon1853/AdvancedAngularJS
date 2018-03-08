@@ -27,6 +27,10 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 
 app.get('/searchClients/:userName/:firstName/:lastName', api.searchClients)
+
+app.get('/searchPosts/:title/:content/:date', api.searchPosts)
+
+
 // LIST Post
 app.get("/posts", api.posts);
 

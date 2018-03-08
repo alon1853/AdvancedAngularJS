@@ -60,6 +60,7 @@ app.controller("ClientsCtrl", function($scope, $rootScope, $window, $cookies, cl
 	$scope.createClient = function(event) {
 		$scope.currentMessage = "";
 		
+
 		if ($scope.validateClient()) {
 			httpFactory.postRequest("/clients/insert", $scope.selectedClient, function(data) {
 				$scope.currentMessage = "Client added successfully";

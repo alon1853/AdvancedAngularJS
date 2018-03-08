@@ -234,6 +234,39 @@ insertPost: function (req_body, callback) {
       return callback(null, docs);
     });
   },
+  searchPosts: function (req_params, callback) {
+      console.log("search posts: parmas" + req_params)
+      var atleastOne = false;
+      
+      var curResult = Post.find();
+      if (req_params.title != undefined && req_params.title != "" && req_params.title != "undefined")
+      {
+        var regTitle = new RegExp(req_params.title, 'i');
+        curResult = curResult.and({ 'title': { $regex: regTitle }})
+      }
+
+      if (req_params.content != undefined && req_params.content != "" && req_params.content != "undefined")
+      {
+        var regContent = new RegExp(req_params.content, 'i');
+        curResult = curResult.and({ 'content': { $regex: regContent }})
+      }
+
+      if (req_params.date != undefined && req_params.date != "" && req_params.date != "undefined")
+      {
+        var regDate = new RegExp(req_params.date, 'i');
+        curResult = curResult.and({ 'date': { $regex: regDate }})
+      }
+
+      curResult.exec(function(err, docs) {
+      if(err) 
+      {
+        console.log(err);
+        return callback (err, null)
+      }
+      console.log(docs);
+      return callback(null, docs);
+    });
+  },
 
   editMarker: function(id, req_body, callback) {
     console.log('*** accessDB.editMarker');
@@ -302,7 +335,6 @@ insertPost: function (req_body, callback) {
 
   insertPost: function (req_body, callback) {
     console.log('*** accessDB.insertPost');
-    console.log(req_body)
     post = new Post();
     post.title = req_body.title
     post.content = req_body.content
@@ -311,8 +343,6 @@ insertPost: function (req_body, callback) {
     post.client = ObjectID(req_body.clientId)
     post.comments = req_body.comments
     post._id = new ObjectID(); // The id is calculated by the Mongoose pre 'save'.
-    console.log("####after")
-    console.log(post);
     post.save(function (err, post) {
       if (err) { console.log('*** new post save err: ' + err); return callback(err); }
 
@@ -352,7 +382,6 @@ insertPost: function (req_body, callback) {
   getPosts: function(callback) {
     console.log('*** accessDB.getPosts');
     Post.find().populate("client").populate("category").exec(function(err, posts) {
-      console.log(posts);
       callback(null, posts);
     });
   },
@@ -360,7 +389,6 @@ insertPost: function (req_body, callback) {
   login: function(req_body, callback) {
     console.log('*** accessDB.login');
     Client.find({$and: [{userName: req_body.userName}, {password: req_body.password} ]}).exec(function (err, docs) {
-    console.log(docs);
     if (err) { return callback(err); }
 
       var client = docs[0]
