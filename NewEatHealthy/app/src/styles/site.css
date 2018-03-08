@@ -67,4 +67,9 @@ textarea {
 
 .multiple-columns {
     columns: 2;
+    border-radius: 10px;
+}
+.multiple-columns:hover {
+    background-color: lightgreen;
+    transition: all 1.5s;
 }

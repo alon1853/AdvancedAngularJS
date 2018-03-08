@@ -11,7 +11,7 @@ app.controller("LoginCtrl", function($scope, $rootScope, $location, $cookies, ht
 			$scope.shouldShowInvalidPassword = true;
 
 		if (!$scope.shouldShowInvalidUsername && !$scope.shouldShowInvalidPassword) {
-			var inputData = {'userName': $scope.username, 'password': $scope.password}
+			var inputData = {'userName': $scope.username, 'password': $scope.password};
 
 			httpFactory.postRequest("/login", inputData, function(data) {
 				if(Object.keys(data.data).length !== 0){

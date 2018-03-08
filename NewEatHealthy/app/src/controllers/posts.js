@@ -54,7 +54,7 @@ app.controller("PostsCtrl", function($scope, $location, $rootScope, postsPropert
 		
 		if ($scope.validatePost()) {
 			var client = $rootScope.getCurrentUser();
-			$scope.selectedPost.clientId = client.id;
+			$scope.selectedPost.clientId = client._id;
 			httpFactory.postRequest("/posts/insert", $scope.selectedPost, function(data) {
 				$scope.currentMessage = "Post added successfully";
 				$scope.selectedPost = undefined;

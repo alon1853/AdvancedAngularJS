@@ -34,14 +34,10 @@
             </a>
         </div>
     </aside>
-
-
-
-
-
+    
     <ui-gmap-google-map center='map.center' zoom='map.zoom'>
-            <ui-gmap-marker idKey='marker.id' coords='marker.coords' ng-repeat="marker in markers">
-            </ui-gmap-marker>
+        <ui-gmap-marker idKey='marker._id' coords='marker.coords' ng-repeat="marker in markers">
+        </ui-gmap-marker>
     </ui-gmap-google-map>
 
 </center>
