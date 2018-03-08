@@ -1,3 +1,5 @@
+//import { groupPosts } from './api/api';
+
 const express = require('express')
 const app = express()
 const api = require('./api/api')
@@ -88,7 +90,9 @@ app.put('/markers/edit/:id', api.editMarker)
 // DELETE MARKER
 app.delete('/markers/delete/:id', api.deleteMarker)
 
-//app.post('/comments/insert', api.addComment)
+app.get('/groupGender', api.groupGender)
+
+// app.post('/comments/insert', api.addComment)
 
 // LIST MARKER
 app.get("/markers", api.markers);
@@ -98,5 +102,6 @@ app.get("/markers", api.markers);
 // login
 app.post('/login', api.login)
 
+app.get('/groupPost/:id', api.groupPosts)
 
 app.listen(PORT, () => console.log('Server is running on port ' + PORT + '...'))

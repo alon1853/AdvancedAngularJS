@@ -35,6 +35,36 @@ exports.clients = function (req, res) {
   });
 };
 
+// exports.groupPosts = function (req, res) {
+//   console.log('*** groupPosts');
+//   db.groupPost(req.params.id,function(err, docs) {
+//     if (err) {
+//       console.log('*** groupPosts err');
+//       res.json({
+//         docs: docs
+//       });
+//     } else {
+//       console.log('*** groupPosts ok');
+//       res.json(docs);
+//     }
+//   });
+// };
+
+exports.groupGender = function (req, res) {
+  console.log('*** groupGender');
+  db.groupGender(function(err, result) {
+    if (err) {
+      console.log('*** groupGender err');
+      res.json({
+        result: result
+      });
+    } else {
+      console.log('*** groupGender ok');
+      res.json(result);
+    }
+  });
+};
+
 exports.markers = function (req, res) {
   console.log('*** markers');
 

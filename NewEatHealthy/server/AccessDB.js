@@ -109,7 +109,7 @@ insertClient: function (req_body, callback) {
   client.lastName = req_body.lastName
   client.gender = req_body.gender
   client.isAdmin = req_body.isAdmin
-  
+  //client.posts = [ObjectID("5aa03faa3e8521fa1a8127b2"),ObjectID("5aa04662015141403c19e73e"),ObjectID("5aa04a996d65162974ec1bcf")]
   client._id = new ObjectID(); // The id is calculated by the Mongoose pre 'save'.
 
   client.save(function (err, client) {
@@ -168,6 +168,72 @@ insertPost: function (req_body, callback) {
 //     callback(null, post._id);
 //   });
 // },
+
+
+groupGender : function (callback) {
+  Client.aggregate([
+    {
+      $group: {
+          _id: '$gender', // grouping key - group by field district
+          count: { $sum: 1 }
+      }
+    }
+  ], function(err, result){
+    if(err)
+    {
+      console.log(err);
+      callback(err,null);
+    }
+    console.log(result);
+    callback(null,result);
+  })
+},
+
+
+groupPost: function (id, callback) {
+  console.log('*** accessDB.getPosts');
+  Client.find({'_id' : id},{'posts':1}).populate('posts').exec(function(err, posts){
+    if(err) 
+    {
+      console.log(err);
+      return callback (err, null)
+    }
+    console.log("posts of user :" + posts);
+    posts.aggregate([
+      {
+        $group: {
+            _id: '$title', // grouping key - group by field district
+            count: { $sum: 1 }
+        }
+    }
+    ], function(err, posts){
+
+      console.log("grouped: " + posts)
+    })
+
+    // needed = users.filter(function(user){
+    //   console.log("posts:" + user)
+    //   console.log("onlyposts:" + user.posts)
+    // return user.posts;
+  // });
+  // console.log(needed);
+  });
+    
+  //  console.log(posts);
+  //  console.log(docs);
+  //  callback(null, docs);
+  // Client.findById(id).populate('posts').exec(function(err, docs) {
+  //   if(err) 
+  //   {
+  //     console.log(err);
+  //     return callback (err, null)
+  //   }
+  //   console.log(docs);
+
+  // })
+  //   console.log(docs);
+  //   callback(null, docs);
+},
 
   insertMarker: function (req_body, callback) {
     console.log('*** accessDB.insertMarker');
