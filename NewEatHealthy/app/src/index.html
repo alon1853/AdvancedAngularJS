@@ -11,7 +11,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 </head>
 <body>
-	 <div class="navbar navbar-inverse navbar-fixed-top" ng-controller="IndexCtrl">
+	 <nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="IndexCtrl">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -46,7 +46,7 @@
 			</div>
 
 		</div>
-	</div>
+	</nav>
 
     <div class="container body-content" style="padding-top: 10px; margin-top: 55px;">
         <ng-view></ng-view>
@@ -67,6 +67,7 @@
 	</div>
 	
 	<!-- Libraries -->
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 	<script src="http://localhost:3001/socket.io/socket.io.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRRx43HDWj3Ctj0htCj61beQyi2l5iEeQ"></script>
 	<script src="js/d3.v4.min.js"></script>
@@ -76,7 +77,6 @@
 	<script src="js/lodash.min.js"></script>
 	<script src="js/angular-simple-logger.js"></script>
 	<script src="js/angular-google-maps.min.js"></script>
-	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 	<script src="js/main.js"></script>
 
