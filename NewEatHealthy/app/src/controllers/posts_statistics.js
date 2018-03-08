@@ -1,4 +1,12 @@
 app.controller("PostsStatisticsCtrl", function($scope, $rootScope, httpFactory) {	
+
+    $scope.saveText = function(text,fileName) {
+        var a = document.createElement('a');
+        a.setAttribute('href', 'data:text/plain;utf-u', +encodeURIComponent(text));
+        a.setAttribute('download', fileName);
+        a.click();
+    }
+
     $scope.generateUserStatistics = function() {
         var svg = d3.select("svg"),
             margin = {top: 20, right: 10, bottom: 30, left: 80},
@@ -12,14 +20,14 @@ app.controller("PostsStatisticsCtrl", function($scope, $rootScope, httpFactory) 
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
         console.log($scope.posts)
-
-        d3.csv("statistics.csv", function(d) {
-            d.count = +d.count;
+        // $scope.saveText(JSON.stringify($scope.posts), 'graph.json');
+        // d3.json('graphs.json', function(d) {
+        //     d.count = +d.count;
             
-        return d;
-        }, function(error, data) {
-        if (error) throw error;
-
+        // return d;
+        // }, function(error, data) {
+        // if (error) throw error;
+        var data = $scope.posts;
         x.domain(data.map(function(d) { return d._id; }));
         y.domain([0, d3.max(data, function(d) { return d.count; })]);
 
@@ -40,7 +48,7 @@ app.controller("PostsStatisticsCtrl", function($scope, $rootScope, httpFactory) 
             .attr("y", function(d) { return y(d.count); })
             .attr("width", x.bandwidth())
             .attr("height", function(d) { return height - y(d.count); });
-        });
+      //  });
     };
     
     httpFactory.getRequest("/groupGender", function(data) {
