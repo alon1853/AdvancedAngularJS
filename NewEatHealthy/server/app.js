@@ -102,6 +102,6 @@ app.get("/markers", api.markers);
 // login
 app.post('/login', api.login)
 
-app.get('/groupPost/:id', api.groupPosts)
+// app.get('/groupPost/:id', api.groupPosts)
 
 app.listen(PORT, () => console.log('Server is running on port ' + PORT + '...'))
