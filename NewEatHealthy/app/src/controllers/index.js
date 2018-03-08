@@ -1,4 +1,4 @@
-app.controller("TimeCtrl", function($scope, $rootScope) {
+app.controller("TimeCtrl", function($scope, $rootScope, clientsProperties) {
 	client = io.connect('http://localhost:3001');
 
 	client.on('seconds', function(data){
@@ -24,7 +24,7 @@ app.controller("IndexCtrl", function($scope, $rootScope, $cookies) {
 	
 	$scope.logout = function() {
 		$cookies.remove("currentUser");
-		
+		clientsProperties.setClient(undefined);
 		return false;
 	};
 });
